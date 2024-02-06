@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/pi_spacing_16dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:requiresFadingEdge="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/pi_spacing_16dp"
+            android:paddingEnd="@dimen/pi_spacing_16dp"
+            android:paddingBottom="@dimen/pi_spacing_16dp">
+
+            <TextView
+                android:id="@+id/pin_title"
+                style="@style/PITextAppearance.Title.Bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                tools:text="Persönliche PIN eingeben" />
+
+            <TextView
+                android:id="@+id/pin_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pi_spacing_16dp"
+                android:lineHeight="@dimen/pi_line_height_big"
+                tools:targetApi="p"
+                tools:text="Bitte bestätigen Sie die Übermittlung Ihrer Ausweisdaten durch Eingabe Ihrer selbstgewählten 6-stelligen PIN." />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/pin_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pi_spacing_16dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/pi_ic_chevron_right"
+                tools:text="Hilfe" />
+
+            <TextView
+                android:id="@+id/pin_digits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pi_spacing_16dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/pi_ic_chevron_right"
+                tools:text="Ihre PIN ist 5-stellig?" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/pi_separator" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/pi_spacing_8dp"
+                android:layout_marginTop="@dimen/pi_spacing_8dp"
+                android:layout_marginBottom="@dimen/pi_spacing_8dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/PIEditText.Default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxCornerRadiusBottomEnd="@dimen/pi_button_corner_radius"
+                    app:boxCornerRadiusBottomStart="@dimen/pi_button_corner_radius"
+                    app:boxCornerRadiusTopEnd="@dimen/pi_button_corner_radius"
+                    app:boxCornerRadiusTopStart="@dimen/pi_button_corner_radius"
+                    app:boxStrokeColor="@color/pi_secondary_brand_color"
+                    app:passwordToggleEnabled="true">
+
+                    <de.post.ident.internal_eid.util.NoImeTextInputEditText
+                        android:id="@+id/pin_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:importantForAccessibility="no"
+                        android:importantForAutofill="no"
+                        android:inputType="numberPassword"
+                        android:maxLength="6"
+                        android:textSize="@dimen/pi_fontsize_title"
+                        tools:hint="Persönliche 6-stellige PIN" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/can_input_layout"
+                    style="@style/PIEditText.Default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:boxCornerRadiusBottomEnd="@dimen/pi_button_corner_radius"
+                    app:boxCornerRadiusBottomStart="@dimen/pi_button_corner_radius"
+                    app:boxCornerRadiusTopEnd="@dimen/pi_button_corner_radius"
+                    app:boxCornerRadiusTopStart="@dimen/pi_button_corner_radius"
+                    app:boxStrokeColor="@color/pi_secondary_brand_color"
+                    app:passwordToggleEnabled="true"
+                    tools:visibility="visible">
+
+                    <de.post.ident.internal_eid.util.NoImeTextInputEditText
+                        android:id="@+id/can_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:importantForAccessibility="no"
+                        android:importantForAutofill="no"
+                        android:inputType="numberPassword"
+                        android:maxLength="6"
+                        android:textSize="@dimen/pi_fontsize_title"
+                        tools:hint="6-stellige CAN" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_continue"
+                style="@style/PIButtonStyle.Default"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/pi_spacing_16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="@dimen/pi_spacing_8dp"
+                android:layout_marginBottom="13dp"
+                android:enabled="false"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                app:icon="@drawable/pi_ic_chevron_right"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="32dp"
+                app:iconTint="@color/pi_text_on_secondary_brand_color" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/attempts_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/pi_spacing_8dp"
+            android:layout_marginEnd="@dimen/pi_spacing_8dp"
+            android:layout_marginBottom="@dimen/pi_spacing_8dp"
+            android:textColor="@color/pi_error"
+            android:visibility="gone"
+            tools:text="Verbleibende Versuche: 1"
+            tools:visibility="visible" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/pi_light_grey"
+            android:columnCount="3"
+            android:elevation="@dimen/cardview_default_elevation"
+            android:paddingStart="@dimen/pi_spacing_16dp"
+            android:paddingEnd="@dimen/pi_spacing_16dp"
+            android:paddingBottom="@dimen/pi_spacing_16dp"
+            android:rowCount="4"
+            tools:ignore="ContentDescription">
+
+            <ImageButton
+                android:id="@+id/keypad_number_1"
+                style="@style/PIButtonStyle.PinInput"
+                android:layout_columnWeight="1"
+                app:srcCompat="@drawable/pi_ic_1" />
+
+            <ImageButton
+                android:id="@+id/keypad_number_2"
+                style="@style/PIButtonStyle.PinInput"
+                android:layout_columnWeight="1"
+                app:srcCompat="@drawable/pi_ic_2" />
+
+            <ImageButton
+                android:id="@+id/keypad_number_3"
+                style="@style/PIButtonStyle.PinInput"
+                android:layout_columnWeight="1"
+                app:srcCompat="@drawable/pi_ic_3" />
+
+            <ImageButton
+                android:id="@+id/keypad_number_4"
+                style="@style/PIButtonStyle.PinInput"
+                android:layout_columnWeight="1"
+                app:srcCompat="@drawable/pi_ic_4" />
+
+            <ImageButton
+                android:id="@+id/keypad_number_5"
+                style="@style/PIButtonStyle.PinInput"
+                android:layout_columnWeight="1"
+                app:srcCompat="@drawable/pi_ic_5" />
+
+            <ImageButton
+                android:id="@+id/keypad_number_6"
+                style="@style/PIButtonStyle.PinInput"
+                android:layout_columnWeight="1"
+                app:srcCompat="@drawable/pi_ic_6" />
+
+            <ImageButton
+                android:id="@+id/keypad_number_7"
+                style="@style/PIButtonStyle.PinInput"
+                android:layout_columnWeight="1"
+                app:srcCompat="@drawable/pi_ic_7" />
+
+            <ImageButton
+                android:id="@+id/keypad_number_8"
+                style="@style/PIButtonStyle.PinInput"
+                android:layout_columnWeight="1"
+                app:srcCompat="@drawable/pi_ic_8" />
+
+            <ImageButton
+                android:id="@+id/keypad_number_9"
+                style="@style/PIButtonStyle.PinInput"
+                android:layout_columnWeight="1"
+                app:srcCompat="@drawable/pi_ic_9" />
+
+            <ImageButton
+                android:id="@+id/keypad_clear"
+                style="@style/PIButtonStyle.PinInput"
+                android:layout_columnWeight="1"
+                app:srcCompat="@drawable/pi_ic_clear" />
+
+            <ImageButton
+                android:id="@+id/keypad_number_0"
+                style="@style/PIButtonStyle.PinInput"
+                android:layout_columnWeight="1"
+                app:srcCompat="@drawable/pi_ic_0" />
+
+            <ImageButton
+                android:id="@+id/keypad_backspace"
+                style="@style/PIButtonStyle.PinInput"
+                android:layout_columnWeight="1"
+                app:srcCompat="@drawable/pi_ic_backspace" />
+        </GridLayout>
+    </LinearLayout>
+</LinearLayout>

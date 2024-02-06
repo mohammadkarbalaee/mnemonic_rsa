@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/pi_spacing_8dp">
+
+    <LinearLayout
+        android:id="@+id/ident_method_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/pi_spacing_16dp"
+        android:paddingTop="@dimen/pi_spacing_8dp"
+        android:paddingEnd="@dimen/pi_spacing_16dp"
+        android:paddingBottom="@dimen/pi_spacing_8dp">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/pi_ic_method_selection_video" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pi_spacing_8dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            tools:text="POSTIDENT durch Postfiliale" />
+
+        <ImageView
+            android:id="@+id/expand_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/pi_ic_chevron_down" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ident_method_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pi_spacing_16dp"
+            android:layout_marginTop="@dimen/pi_spacing_8dp"
+            android:layout_marginEnd="@dimen/pi_spacing_16dp"
+            tools:text="Identifizieren Sie sich mit Postident durch Brieftaube." />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/infoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pi_spacing_16dp"
+            android:layout_marginTop="@dimen/pi_spacing_16dp"
+            android:layout_marginEnd="@dimen/pi_spacing_16dp"
+            app:cardBackgroundColor="@color/pi_light_grey"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pi_spacing_8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/disabledInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/pi_spacing_16dp"
+                    android:visibility="gone"
+                    tools:text="Aktuell steht POSTIDENT durch Videochat leider nicht zur Verfügung. Bitte nutzen Sie nach Möglichkeit ein anderes Identifizierungsverfahren oder probieren Sie es zu einem späteren Zeitpunkt noch einmal."
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/footer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Dauer: 5 Minuten\nÖffnungszeiten: Mo - So von 8 -22 Uhr " />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/faq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pi_spacing_16dp"
+            android:layout_marginTop="@dimen/pi_spacing_16dp"
+            android:layout_marginEnd="@dimen/pi_spacing_16dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            app:drawableStartCompat="@drawable/pi_ic_chevron_right"
+            tools:text="Häufige Fragen"
+            tools:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_start_ident_method"
+            style="@style/PIButtonStyle.Default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pi_spacing_16dp"
+            android:layout_marginTop="@dimen/pi_spacing_16dp"
+            android:layout_marginEnd="@dimen/pi_spacing_16dp"
+            android:layout_marginBottom="@dimen/pi_spacing_8dp"
+            tools:text="Weiter" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pi_separator_line_height"
+        android:layout_marginTop="@dimen/pi_spacing_8dp"
+        android:background="@color/pi_separator_line" />
+</LinearLayout>

@@ -1,0 +1,4 @@
+ext {
+    gitHash = "73fb91112"
+    gitBuild = 10825
+}

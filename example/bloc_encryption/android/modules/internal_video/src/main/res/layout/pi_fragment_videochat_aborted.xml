@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/ident_cancel_title"
+        style="@style/PITextAppearance.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/pi_spacing_16dp"
+        android:drawablePadding="@dimen/pi_spacing_16dp"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/pi_ic_fail"
+        tools:text="Der Videochat wurde vorzeitig beendet." />
+
+    <TextView
+        android:id="@+id/ident_cancel_subtitle"
+        style="@style/PITextAppearance.Default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ident_cancel_title"
+        android:layout_margin="@dimen/pi_spacing_16dp"
+        tools:text="Ihre Daten wurden nicht gespeichert oder weitergeleitet.\n\nBitte versuchen Sie es später erneut oder wählen Sie ein anderes Verfahren." />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_retry_call"
+            style="@style/PIButtonStyle.Default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pi_spacing_16dp"
+            android:layout_marginTop="@dimen/pi_spacing_16dp"
+            android:layout_marginEnd="@dimen/pi_spacing_16dp"
+            android:layout_marginBottom="@dimen/pi_spacing_8dp"
+            tools:text="Erneut versuchen" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_to_method_selection"
+            style="@style/PIButtonStyle.Default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pi_spacing_16dp"
+            android:layout_marginTop="@dimen/pi_spacing_8dp"
+            android:layout_marginEnd="@dimen/pi_spacing_16dp"
+            android:layout_marginBottom="@dimen/pi_spacing_16dp"
+            tools:text="Anderes Verfahren wählen" />
+    </LinearLayout>
+</RelativeLayout>

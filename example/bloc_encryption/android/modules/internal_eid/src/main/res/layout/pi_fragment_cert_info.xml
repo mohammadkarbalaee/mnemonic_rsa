@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pi_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/cert_info_title"
+        style="@style/PITextAppearance.Title.Bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/pi_spacing_16dp"
+        android:layout_marginTop="@dimen/pi_spacing_16dp"
+        android:layout_marginEnd="@dimen/pi_spacing_16dp"
+        android:layout_marginBottom="@dimen/pi_spacing_8dp"
+        tools:text="Informationen" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:requiresFadingEdge="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/pi_spacing_16dp"
+                android:layout_marginTop="@dimen/pi_spacing_8dp"
+                android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                android:layout_marginBottom="@dimen/pi_spacing_16dp"
+                android:animateLayoutChanges="true"
+                android:elevation="2dp"
+                app:cardBackgroundColor="@color/pi_light_grey"
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/cert_issuer_title"
+                        style="@style/PITextAppearance.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pi_spacing_8dp"
+                        android:layout_marginTop="@dimen/pi_spacing_8dp"
+                        android:layout_marginEnd="@dimen/pi_spacing_8dp"
+                        tools:text="Zertifikatsaussteller" />
+
+                    <TextView
+                        android:id="@+id/cert_issuer_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pi_spacing_16dp"
+                        android:layout_marginTop="@dimen/pi_spacing_16dp"
+                        android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                        android:textStyle="bold"
+                        tools:text="D-Trust GmbH" />
+
+                    <TextView
+                        android:id="@+id/cert_issuer_url"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pi_spacing_16dp"
+                        android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                        android:layout_marginBottom="@dimen/pi_spacing_16dp"
+                        android:autoLink="email|web"
+                        android:textColorLink="@color/pi_primary_text"
+                        tools:text="http://www.d-trust.net" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/pi_spacing_16dp"
+                android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                android:layout_marginBottom="@dimen/pi_spacing_16dp"
+                android:animateLayoutChanges="true"
+                android:elevation="2dp"
+                app:cardBackgroundColor="@color/pi_light_grey"
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/cert_validity_title"
+                        style="@style/PITextAppearance.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pi_spacing_8dp"
+                        android:layout_marginTop="@dimen/pi_spacing_8dp"
+                        android:layout_marginEnd="@dimen/pi_spacing_8dp"
+                        tools:text="Gültigkeit des Zertifikats" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/cert_issued_on_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/pi_spacing_16dp"
+                            android:layout_marginTop="@dimen/pi_spacing_16dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="Ausgestellt am:" />
+
+                        <TextView
+                            android:id="@+id/cert_valid_until_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/pi_spacing_16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/cert_issued_on_title"
+                            app:layout_constraintTop_toBottomOf="@+id/cert_issued_on_title"
+                            tools:text="Gültig bis:" />
+
+                        <TextView
+                            android:id="@+id/cert_issued_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/pi_spacing_8dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/cert_issued_on_title"
+                            app:layout_constraintStart_toEndOf="@+id/cert_issued_on_title"
+                            app:layout_constraintTop_toTopOf="@+id/cert_issued_on_title"
+                            tools:text="01.01.1970" />
+
+                        <TextView
+                            android:id="@+id/cert_valid_until"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="@+id/cert_valid_until_title"
+                            app:layout_constraintStart_toStartOf="@+id/cert_issued_on"
+                            app:layout_constraintTop_toTopOf="@+id/cert_valid_until_title"
+                            tools:text="01.01.1970" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/pi_spacing_16dp"
+                android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                android:layout_marginBottom="@dimen/pi_spacing_16dp"
+                android:animateLayoutChanges="true"
+                android:elevation="2dp"
+                app:cardBackgroundColor="@color/pi_light_grey"
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/cert_info_tos_title"
+                        style="@style/PITextAppearance.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pi_spacing_8dp"
+                        android:layout_marginTop="@dimen/pi_spacing_8dp"
+                        android:layout_marginEnd="@dimen/pi_spacing_8dp"
+                        tools:text="Diensteanbieter" />
+
+                    <TextView
+                        android:id="@+id/cert_info_tos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:autoLink="phone|email|web"
+                        android:lineHeight="@dimen/pi_line_height_big"
+                        android:textColorLink="@color/pi_primary_text"
+                        tools:text="Name, Anschrift und E-Mail-Adresse des Diensteanbieters:\nDeutsche Post AG\nCharles-de-Gaulle-Straße 20\n53113 Bonn\ninfo@deutschepost.de\n\nGeschäftszweck:\nPostident-Online im Sinne des § 6 Abs. 2 Nr. 2 GwG\n\nHinweis auf die für den Diensteanbieter zuständigen Stellen, die die Einhaltung der Vorschriften zum Datenschutz kontrollieren:\nDie Bundesbeauftragte für den Datenschutz und die Informationsfreiheit\nHusarenstraße 30\n53117 Bonn\n0228-997799-0\npoststelle@bfdi.bund.de\nhttp://www.bfdi.bund.de" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_close_dialog"
+        style="@style/PIButtonStyle.Default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/pi_spacing_16dp"
+        tools:text="@string/default_btn_ok" />
+
+</LinearLayout>

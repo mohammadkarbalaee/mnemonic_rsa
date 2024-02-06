@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingBottom="@dimen/pi_spacing_64dp">
+
+        <TextView
+            android:id="@+id/status_title"
+            style="@style/PITextAppearance.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="@dimen/pi_fontsize_big"
+            tools:text="Status Title" />
+
+        <TextView
+            android:id="@+id/status_subTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/status_title"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/pi_spacing_16dp"
+            android:gravity="center"
+            tools:text="Status Subtitle" />
+
+        <ImageView
+            android:id="@+id/status_icon"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_below="@id/status_subTitle"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter"
+            tools:src="@drawable/pi_ic_blank_pdf_screen" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/status_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pi_spacing_16dp"
+            android:layout_marginTop="@dimen/pi_spacing_16dp"
+            android:layout_marginEnd="@dimen/pi_spacing_16dp"
+            android:gravity="center"
+            tools:text="Sie haben einen Wiedereinstiegslink per E-Mail erhalten. Damit können Sie die Unterschrift auch auf einem anderen Gerät durchführen." />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_finish_postident"
+            style="@style/PIButtonStyle.Default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/pi_spacing_16dp"
+            tools:text="Beenden" />
+    </LinearLayout>
+</RelativeLayout>

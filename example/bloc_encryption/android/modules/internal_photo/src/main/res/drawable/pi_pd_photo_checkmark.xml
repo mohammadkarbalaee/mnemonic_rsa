@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="260dp"
+    android:height="201dp"
+    android:viewportWidth="260"
+    android:viewportHeight="201">
+
+    <path
+        android:name="checkmark_11_"
+        android:fillColor="#91DC5A"
+        android:pathData="M183.8,37.3 C183.3,36.8,183.1,36.1,183.1,35.7 C183.1,35.2,183.3,34.5,183.8,34.1
+L187.1,30.8 C188,29.9,189.4,29.9,190.4,30.8 L190.6,31 L203.5,44.8
+C204,45.3,204.7,45.3,205.1,44.8 L236.5,12.2 L236.7,12.2 L236.7,12.2
+C237.6,11.3,239,11.3,240,12.2 L243.3,15.5 C244.2,16.4,244.2,17.8,243.3,18.8
+L243.3,18.8 L205.8,57.7 C205.3,58.2,204.9,58.4,204.2,58.4
+C203.5,58.4,203,58.2,202.6,57.7 L184.3,38 L183.8,37.3 L183.8,37.3 Z" />
+</vector>

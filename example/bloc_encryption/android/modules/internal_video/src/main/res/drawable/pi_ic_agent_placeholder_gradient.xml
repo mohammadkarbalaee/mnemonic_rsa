@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/pi_ic_agent_gradient" />
+    <item
+        android:drawable="@drawable/pi_ic_agent_placeholder"
+        android:left="24dp"
+        android:right="24dp"
+        android:top="32dp"
+        />
+</layer-list>

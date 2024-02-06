@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pi_white"
+    android:gravity="center_horizontal|bottom"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/camera_view_finder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/pi_camera_view_finder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintDimensionRatio="W,4:3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/pi_spacing_64dp"
+            android:textColor="@color/pi_white"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="visible"
+            tools:text="3"/>
+
+        <ImageView
+            android:id="@+id/mask_fvlc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pi_mask_fvlc"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:id="@+id/title_container"
+            android:layout_margin="@dimen/pi_spacing_4dp"
+            android:translationZ="@dimen/pi_spacing_2dp"
+            android:visibility="visible"
+            android:elevation="111dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/pi_title"
+                style="@style/PITextAppearance.Default"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="4"
+                android:layout_weight="4"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/pi_very_dark_grey"
+                android:visibility="visible"
+                tools:visibility="visible"
+                tools:text="Bitte bewegen Sie Ihren Kopf in die Silhouette. \nDrehen Sie Ihren Kopf leicht in die, per Pfeil, anzeigte Richtung, um die Echtheit Ihrer Person festzustellen." />
+
+            <ImageView
+                android:id="@+id/pi_icon"
+                android:layout_weight="0"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pi_info_icon"
+                tools:src="@drawable/pi_info_icon"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/continueBtn"
+        style="@style/PIButtonStyle.Default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginStart="@dimen/pi_spacing_16dp"
+        android:layout_marginTop="@dimen/pi_spacing_8dp"
+        android:layout_marginEnd="@dimen/pi_spacing_16dp"
+        android:layout_marginBottom="@dimen/pi_spacing_16dp"
+        android:enabled="false"
+        tools:text="Aufnahme starten"
+        android:visibility="visible"/>
+</LinearLayout>

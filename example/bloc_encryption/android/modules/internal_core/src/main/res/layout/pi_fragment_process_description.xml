@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/welcome_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingStart="@dimen/pi_spacing_16dp"
+        android:paddingTop="@dimen/pi_spacing_24dp"
+        android:paddingEnd="@dimen/pi_spacing_16dp"
+        android:paddingBottom="@dimen/pi_spacing_16dp"
+        android:textAppearance="@style/PITextAppearance.Bold"
+        tools:text="Willkommen bei der Identifizierung für DemoBank24\nmultiline" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/pi_spacing_8dp"
+        android:layout_marginBottom="@dimen/pi_spacing_8dp"
+        app:tabBackground="@drawable/pi_tab_selector"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"
+        app:tabMaxWidth="16dp" />
+
+    <TextView
+        android:id="@+id/faq_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/pi_spacing_16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="@dimen/pi_spacing_16dp"
+        android:paddingBottom="4dp"
+        app:drawableStartCompat="@drawable/pi_ic_chevron_right"
+        tools:text="Häufige Fragen" />
+
+    <TextView
+        android:id="@+id/legal_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/pi_spacing_16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="@dimen/pi_spacing_16dp"
+        android:paddingBottom="4dp"
+        app:drawableStartCompat="@drawable/pi_ic_chevron_right"
+        tools:text="Nutzungsbedingungen &amp; Datenschutzhinweise" />
+
+    <TextView
+        android:id="@+id/additional_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pi_spacing_16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingStart="@dimen/pi_spacing_16dp"
+        android:paddingEnd="@dimen/pi_spacing_16dp"
+        android:textColor="@color/pi_grey"
+        android:textColorLink="@color/pi_grey"
+        android:visibility="gone"
+        tools:text="Wir verarbeiten Ihre Daten, um Sie sicher zu identifizieren. Dabei können biometrische Daten verwendet werden, um betrügerische Aktivitäten besser zu erkennen. Details"
+        tools:visibility="visible" />
+
+</LinearLayout>

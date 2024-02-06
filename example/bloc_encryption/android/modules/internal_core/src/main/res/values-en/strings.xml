@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="case_id_clipboard">In case the transaction number can’t be passed, copy it to the clipboard:</string>
+    <string name="case_id_clipboard_success">The transaction number has been copied to the clipboard</string>
+
+    <string name="default_btn_cancel">Cancel</string>
+    <string name="default_btn_close">Close</string>
+    <string name="default_btn_confirm">Confirm</string>
+    <string name="default_btn_continue">Continue</string>
+    <string name="default_btn_ok">OK</string>
+
+    <string name="err_dialog_no_connection_text">We’re sorry, no connection could be established. Please check your internet connection and try again.</string>
+    <string name="err_dialog_security_issues_text">We’re sorry, your device does not meet the minimum requirements of the current security guidelines. Please update your device and try again.</string>
+    <string name="err_dialog_ssl_error_text">Secured server connection (SSL) failed. Please try again later or install the most recent version of the app.</string>
+    <string name="err_dialog_technical_error">A technical error occurred. Please try again later.</string>
+    <string name="err_new_version_available">Please download the current version of the POSTIDENT app to be able to use all features.</string>
+    <string name="err_new_version_available_sdk">Please download the current version of the POSTIDENT app to be able to use all features.</string>
+
+    <string name="general_identification_not_possible">Identification not possible</string>
+    <string name="init_sdk_loading">Identification process is being initialized</string>
+</resources>

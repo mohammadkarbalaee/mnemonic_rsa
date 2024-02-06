@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/pi_pd_photo_face"/>
+    <item android:drawable="@drawable/pi_pd_photo_mask"/>
+    <item android:drawable="@drawable/pi_pd_photo_phonehand"/>
+    <item android:drawable="@drawable/pi_pd_photo_rec"/>
+    <item android:drawable="@drawable/pi_pd_photo_checkmark"/>
+</layer-list>

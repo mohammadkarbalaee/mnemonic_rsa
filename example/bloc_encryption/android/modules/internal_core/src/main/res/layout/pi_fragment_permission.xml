@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/pi_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/pi_spacing_16dp"
+        android:layout_weight="1"
+        android:paddingBottom="@dimen/pi_spacing_16dp"
+        android:requiresFadingEdge="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/pi_spacing_16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pi_permissions_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pi_spacing_16dp"
+                android:layout_marginBottom="@dimen/pi_spacing_16dp"
+                tools:text="Für die Identifizierung müssen folgende Berechtigungen gesetzt werden:" />
+
+            <View
+                android:id="@+id/separator_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pi_separator_line_height"
+                android:background="@color/pi_separator_line"
+                android:visibility="visible"
+                tools:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/pi_permission_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/pi_permission_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pi_spacing_16dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/pi_permission_help_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/pi_permission_help_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/pi_spacing_16dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/pi_permission_button_confirm"
+        style="@style/PIButtonStyle.Default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/pi_spacing_16dp"
+        android:layout_marginEnd="@dimen/pi_spacing_16dp"
+        android:layout_marginBottom="@dimen/pi_spacing_16dp"
+        tools:text="@string/default_btn_continue" />
+</LinearLayout>

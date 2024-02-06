@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/eid_title"
+                style="@style/PITextAppearance.Title.Bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/pi_spacing_16dp"
+                android:layout_marginTop="@dimen/pi_spacing_16dp"
+                android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                tools:text="Bereit zum Auslesen" />
+
+            <TextView
+                android:id="@+id/eid_description"
+                style="@style/PITextAppearance.Default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eid_title"
+                android:layout_margin="@dimen/pi_spacing_16dp"
+                android:lineHeight="@dimen/pi_line_height_big"
+                tools:text="Starten Sie, indem Sie Ihren Ausweis langsam über die Rückseite Ihres Smartphones bewegen.\nWenn die Ladegrafik erscheint, haben Sie den NFC-Chip gefunden." />
+
+            <RelativeLayout
+                android:id="@+id/layout_animation_content"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_below="@+id/eid_description"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/eid_id_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.0"
+                    android:src="@drawable/pi_ic_anim_ausweis"
+                    tools:alpha="1.0" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/eid_id_card">
+
+                    <ImageView
+                        android:id="@+id/eid_smartphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="140dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/pi_ic_anim_smartphone" />
+
+                    <ImageView
+                        android:id="@+id/eid_smartphone_card_detected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="140dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:alpha="0.0"
+                        android:src="@drawable/pi_ic_anim_smartphone_card_detected" />
+
+                    <ImageView
+                        android:id="@+id/eid_logo"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/pi_ic_anim_personalausweis_logo" />
+
+                    <ProgressBar
+                        android:id="@+id/eid_spinner_preview"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="36dp"
+                        android:alpha="0.0"
+                        android:indeterminate="false"
+                        android:indeterminateOnly="false"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/pi_ic_eid_spinner" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/eid_hint"
+                style="@style/PITextAppearance.Default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_animation_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/pi_spacing_16dp"
+                tools:text="Warte auf Ausweis ..." />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/eid_help_btn"
+                style="@style/PIButtonStyle.Default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/pi_spacing_16dp"
+                tools:text="Hilfe" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/progress_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pi_background_transparent"
+        android:visibility="gone"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/pi_background_transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/eid_spinner_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/eid_spinner"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="1.0"
+                    android:indeterminateOnly="false"
+                    android:indeterminateTint="@color/pi_primary_brand_color"
+                    android:max="100"
+                    android:progressDrawable="@drawable/pi_ic_eid_spinner"
+                    tools:progress="75" />
+
+                <TextView
+                    android:id="@+id/eid_percentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/pi_spacing_16dp"
+                    android:textColor="@color/pi_white"
+                    android:textSize="@dimen/pi_fontsize_big"
+                    android:textStyle="bold"
+                    tools:text="75%" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/eid_spinner_subtitle"
+                style="@style/PITextAppearance.Default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/pi_spacing_16dp"
+                android:textColor="@color/pi_light_grey"
+                tools:text="Ausweisdaten werden übermittelt" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pi_spacing_16dp"
+                android:layout_marginBottom="@dimen/pi_spacing_16dp"
+                android:background="@color/pi_primary_brand_color"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/pi_spacing_16dp"
+                    android:src="@drawable/pi_ic_error_black_48dp"
+                    app:tint="@color/pi_icon_color_on_primary_brand_color" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/pi_spacing_16dp"
+                    android:paddingTop="@dimen/pi_spacing_16dp"
+                    android:paddingBottom="@dimen/pi_spacing_16dp">
+
+                    <TextView
+                        android:id="@+id/eid_progress_title"
+                        style="@style/PITextAppearance.Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/pi_text_on_primary_brand_color"
+                        tools:text="Achtung:" />
+
+                    <TextView
+                        android:id="@+id/eid_progress_subtitle"
+                        style="@style/PITextAppearance.Default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/pi_text_on_primary_brand_color"
+                        tools:text="Unterbrechen Sie nicht den Kontakt zwischen Ausweis und Smartphone.\nDas Auslesen kann einige Sekunden dauern." />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textfield.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pi_form_choices_field"
+    style="@style/PIEditText.DropDown"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/pi_spacing_16dp"
+    android:layout_marginEnd="@dimen/pi_spacing_16dp"
+    android:layout_marginBottom="@dimen/pi_spacing_8dp"
+    app:boxCornerRadiusBottomEnd="@dimen/pi_button_corner_radius"
+    app:boxCornerRadiusBottomStart="@dimen/pi_button_corner_radius"
+    app:boxCornerRadiusTopEnd="@dimen/pi_button_corner_radius"
+    app:boxCornerRadiusTopStart="@dimen/pi_button_corner_radius"
+    app:boxStrokeColor="@color/pi_secondary_brand_color"
+    app:hintTextColor="@color/pi_primary_hint_text">
+
+    <AutoCompleteTextView
+        android:id="@+id/pi_form_choices_autocomplete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:cursorVisible="false"
+        android:inputType="none" />
+</com.google.android.material.textfield.TextInputLayout>

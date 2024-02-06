@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/access_rights_title"
+        style="@style/PITextAppearance.Title.Bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/pi_spacing_16dp"
+        tools:text="Auszulesende Ausweisdaten" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/pi_spacing_16dp"
+        android:layout_weight="1"
+        android:requiresFadingEdge="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/pi_spacing_16dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cert_info_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pi_spacing_16dp"
+                android:animateLayoutChanges="true"
+                android:clickable="true"
+                android:elevation="2dp"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/pi_light_grey"
+                app:cardCornerRadius="4dp">
+
+                <TextView
+                    android:id="@+id/cert_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawablePadding="@dimen/pi_spacing_8dp"
+                    android:padding="@dimen/pi_spacing_16dp"
+                    app:drawableEndCompat="@drawable/pi_ic_info"
+                    tools:text="Informationen zu Zertifikat und Diensteanbieter" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pi_spacing_16dp"
+                android:animateLayoutChanges="true"
+                android:elevation="2dp"
+                app:cardBackgroundColor="@color/pi_light_grey"
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/access_rights_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineHeight="@dimen/pi_line_height_big"
+                        android:paddingStart="@dimen/pi_spacing_16dp"
+                        android:paddingTop="@dimen/pi_spacing_16dp"
+                        android:paddingEnd="@dimen/pi_spacing_16dp"
+                        tools:text="Die folgenden Daten werden im nächsten Schritt ausgelesen und übermittelt:" />
+
+                    <LinearLayout
+                        android:id="@+id/access_rights_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/pi_spacing_16dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/accept_button"
+        style="@style/PIButtonStyle.Default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/pi_spacing_16dp"
+        android:layout_marginEnd="@dimen/pi_spacing_16dp"
+        android:layout_marginBottom="@dimen/pi_spacing_16dp"
+        tools:text="Weiter zur PIN-Eingabe" />
+</LinearLayout>

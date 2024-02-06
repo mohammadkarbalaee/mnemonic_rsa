@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PITextAppearance.CouponLabel" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">@dimen/pi_fontsize_normal</item>
+        <item name="android:typeface">normal</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/pi_grey</item>
+    </style>
+
+    <style name="PITextViewStyle.Monospace" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:typeface">monospace</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textIsSelectable">true</item>
+    </style>
+
+    <style name="PITextViewStyle.Monospace.Boxed" parent="PITextViewStyle.Monospace">
+        <item name="android:background">@drawable/pi_textview_border</item>
+        <item name="android:padding">@dimen/pi_padding_text_view</item>
+        <item name="android:layout_marginStart">@dimen/pi_margin_text_view</item>
+        <item name="android:layout_marginEnd">@dimen/pi_margin_text_view</item>
+        <item name="android:layout_marginBottom">@dimen/pi_margin_text_view_bottom</item>
+        <item name="android:layout_marginTop">@dimen/pi_margin_text_view</item>
+    </style>
+</resources>

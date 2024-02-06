@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/pi_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <TextView
+        android:id="@+id/tv_privacy_policy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_vertical"
+        android:padding="@dimen/pi_spacing_16dp"
+        android:visibility="gone"
+        tools:text="Line 1"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/separator_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pi_separator_line_height"
+        android:background="@color/pi_separator_line"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_additional_privacy_policy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_vertical"
+        android:padding="@dimen/pi_spacing_16dp"
+        android:visibility="gone"
+        tools:text="Line 2"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/separator_line_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pi_separator_line_height"
+        android:background="@color/pi_separator_line"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</LinearLayout>

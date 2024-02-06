@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pi_white"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:visibility="visible">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/pi_spacing_64dp"
+        android:progressDrawable="@drawable/pi_circle_primary"
+        android:translationZ="2dp"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/PITextAppearance.Title.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/pi_spacing_16dp"
+        android:visibility="visible"
+        tools:text="Ausweisdaten überprüfen"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        style="@style/PITextAppearance.Default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:gravity="center_vertical"
+        android:padding="@dimen/pi_spacing_16dp"
+        android:visibility="visible"
+        tools:text="Bitte prüfen Sie, ob die Daten von Ihrem Ausweis richtig erfasst wurden."
+        tools:visibility="visible" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/control_container"
+        android:layout_below="@id/subtitle"
+        android:layout_marginBottom="@dimen/pi_spacing_16dp"
+        android:layout_weight="1"
+        android:requiresFadingEdge="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/pi_spacing_16dp"
+                android:layout_marginTop="@dimen/pi_spacing_8dp"
+                android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                android:layout_marginBottom="@dimen/pi_spacing_16dp"
+                android:elevation="2dp"
+                app:cardBackgroundColor="@color/pi_light_grey"
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:id="@+id/result_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical"
+                    android:padding="@dimen/pi_spacing_16dp">
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/control_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/retryBtn"
+            style="@style/PIButtonStyle.Default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pi_spacing_16dp"
+            android:layout_marginTop="@dimen/pi_spacing_8dp"
+            android:layout_marginEnd="@dimen/pi_spacing_16dp"
+            android:enabled="true"
+            android:textAlignment="center"
+            android:visibility="invisible"
+            tools:text="Neu auslesen"
+            tools:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/continueBtn"
+            style="@style/PIButtonStyle.Default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pi_spacing_16dp"
+            android:layout_marginTop="@dimen/pi_spacing_8dp"
+            android:layout_marginEnd="@dimen/pi_spacing_16dp"
+            android:layout_marginBottom="@dimen/pi_spacing_8dp"
+            android:enabled="true"
+            android:textAlignment="center"
+            android:visibility="invisible"
+            tools:text="Daten bestätigen"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/confirmDataInfo"
+            style="@style/PITextAppearance.Default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pi_spacing_8dp"
+            android:layout_marginStart="@dimen/pi_spacing_16dp"
+            android:layout_marginEnd="@dimen/pi_spacing_16dp"
+            android:layout_marginBottom="@dimen/pi_spacing_24dp"
+            android:visibility="gone"
+            tools:text="Ihre Daten werden zur Überprüfung an unsere Agenten weitergeleitet."
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pi_black"
+        tools:visibility="visible" />
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="PIDatePickerButtonStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textAppearance">@style/PITextAppearance.Button</item>
+        <item name="android:textColor">@color/pi_black</item>
+        <item name="cornerRadius">@dimen/pi_button_corner_radius</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="WheelSpinner">
+        <item name="android:calendarViewShown">false</item>
+        <item name="android:datePickerMode">spinner</item>
+        <item name="android:dividerPadding">@dimen/pi_spacing_64dp</item>
+    </style>
+
+</resources>

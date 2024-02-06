@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PIDialogTheme" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="colorPrimary">@color/pi_primary_brand_color</item>
+        <item name="colorSecondary">@color/pi_secondary_brand_color</item>
+        <item name="colorPrimaryDark">@color/pi_primary_dark_brand_color</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PIButtonStyle.DialogButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/PIButtonStyle.DialogButton</item>
+        <item name="buttonBarNeutralButtonStyle">@style/PIButtonStyle.DialogButton</item>
+        <item name="android:lineSpacingExtra">@dimen/pi_spacing_6dp</item>
+    </style>
+</resources>

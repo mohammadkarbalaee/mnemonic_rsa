@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- https://localise.biz/api/export/locale/de-DE.xml?format=android&filter=fallback&no-comments=true&order=id&key=XXX_INSERT_API_KEY_XXX -->
+<resources>
+    <string name="case_id_clipboard">Sollte die Übergabe der Vorgangsnummer nicht wie gewünscht funktionieren, können Sie sich diese zur Sicherheit in die Zwischenablage kopieren:</string>
+    <string name="case_id_clipboard_success">Die Vorgangsnummer wurde in die Zwischenablage gespeichert</string>
+
+    <string name="default_btn_cancel">Abbrechen</string>
+    <string name="default_btn_close">Schließen</string>
+    <string name="default_btn_confirm">Bestätigen</string>
+    <string name="default_btn_continue">Fortfahren</string>
+    <string name="default_btn_ok">OK</string>
+
+    <string name="err_dialog_no_connection_text">Die Verbindung konnte leider nicht hergestellt werden. Bitte prüfen Sie Ihre Internetanbindung und versuchen Sie es erneut.</string>
+    <string name="err_dialog_security_issues_text">Ihr Gerät erfüllt leider nicht die Mindestanforderungen der aktuellen Sicherheitsrichtlinien. Bitte aktualisieren Sie ihr Gerät und versuchen es erneut.</string>
+    <string name="err_dialog_ssl_error_text">Es ist ein Fehler bei der gesicherten Verbindung zum Server aufgetreten (SSL). Bitte versuchen Sie es später erneut oder installieren Sie die aktuellste Version der App.</string>
+    <string name="err_dialog_technical_error">Es ist ein technischer Fehler aufgetreten. Bitte versuchen Sie es später erneut.</string>
+    <string name="err_new_version_available">Bitte laden Sie die aktuelle Version der POSTIDENT App runter, damit Sie die volle Funktionalität nutzen können.</string>
+    <string name="err_new_version_available_sdk">Bitte laden Sie die aktuelle Version der POSTIDENT App runter, damit Sie die volle Funktionalität nutzen können.</string>
+
+    <string name="general_identification_not_possible">Identifikation nicht möglich</string>
+    <string name="init_sdk_loading">Identifizierungsprozess wird initialisiert</string>
+</resources>

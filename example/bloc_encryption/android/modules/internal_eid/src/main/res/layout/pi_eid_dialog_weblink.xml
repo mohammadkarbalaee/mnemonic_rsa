@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/pi_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        style="@style/PITextAppearance.Title.Bold"
+        android:textSize="@dimen/pi_fontsize_big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/pi_spacing_16dp"
+        android:layout_marginTop="@dimen/pi_spacing_16dp"
+        android:layout_marginEnd="@dimen/pi_spacing_16dp"
+        android:layout_marginBottom="@dimen/pi_spacing_8dp"
+        android:visibility="visible"
+        tools:text="PIN vergessern?" />
+
+    <TextView
+        style="@style/PIDialogTheme"
+        android:textSize="@dimen/pi_fontsize_title"
+        android:id="@+id/dialog_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/pi_spacing_16dp"
+        android:textColorLink="@color/pi_primary_text"
+        android:visibility="visible"
+        tools:text="Falls Sie bereits einen Personalausweis... Falls Sie bereits einen Personalausweis... Falls Sie bereits einen Personalausweis..." />
+</LinearLayout>

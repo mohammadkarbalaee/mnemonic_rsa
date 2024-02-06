@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Customizable colors see Docs/color_definitions/README.md -->
+    <color name="pi_primary_brand_color">#ffcc00</color>
+    <color name="pi_primary_dark_brand_color">#e8b900</color>
+    <color name="pi_secondary_brand_color">#ffcc00</color>
+    <color name="pi_text_on_primary_brand_color">#000000</color>
+    <color name="pi_text_on_secondary_brand_color">#000000</color>
+    <color name="pi_icon_color_on_primary_brand_color">#000000</color>
+    <color name="pi_exit_icon_color_on_primary_brand_color">#c61111</color>
+    <bool name="pi_status_bar_text_color_dark">false</bool>
+
+    <!-- other colors -->
+    <color name="pi_post_yellow">#ffcc00</color>
+    <color name="pi_post_yellow_soft">#fffae6</color>
+    <color name="pi_status_bar_text_color">@color/pi_black</color>
+    <color name="pi_primary_text">#333333</color>
+    <color name="pi_primary_hint_text">#555555</color>
+    <color name="pi_label_text">#8c8c8c</color>
+    <color name="pi_dark_grey">#7a7a7a</color>
+    <color name="pi_very_dark_grey">#2A2A2A</color>
+    <color name="pi_grey">#cccccc</color>
+    <color name="pi_light_grey">#f3f3f3</color>
+    <color name="pi_white">#ffffff</color>
+    <color name="pi_black">#000000</color>
+    <color name="pi_button_disabled">#e5e5e5</color>
+    <color name="pi_separator_line">@color/pi_grey</color>
+    <color name="pi_background_transparent">#aa000000</color>
+    <color name="pi_transparent">#00000000</color>
+    <color name="pi_loading_screen_text">@color/pi_white</color>
+    <color name="pi_textview_border">#fbfbfb</color>
+    <color name="pi_error">#c61111</color>
+    <color name="pi_btn_focus">#D40511</color>
+</resources>

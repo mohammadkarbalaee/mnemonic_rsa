@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/can_description_title"
+        style="@style/PITextAppearance.Title.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/pi_spacing_16dp"
+        android:layout_marginTop="@dimen/pi_spacing_16dp"
+        android:layout_marginEnd="@dimen/pi_spacing_16dp"
+        android:layout_marginBottom="@dimen/pi_spacing_8dp"
+        android:gravity="center"
+        tools:text="Eingabe der CAN erforderlich" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:requiresFadingEdge="vertical"
+        android:fadingEdgeLength="@dimen/pi_spacing_64dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/can_description_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pi_spacing_16dp"
+                android:layout_marginTop="@dimen/pi_spacing_8dp"
+                android:gravity="center"
+                android:lineHeight="@dimen/pi_line_height_big"
+                tools:text="Sie haben Ihre PIN mehrmals falsch eingegeben.\nGeben Sie nun aus Sicherheitsgründen Ihre 6-stellige CAN ein.\nDiese finden Sie wie folgendermaßen dargestellt auf Ihrem Ausweisdokument." />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pi_spacing_16dp"
+                app:srcCompat="@drawable/pi_can_help_perso" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/pi_spacing_16dp"
+                android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                android:background="@color/pi_separator_line" />
+
+            <TextView
+                android:id="@+id/can_description_warning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pi_spacing_16dp"
+                android:gravity="center"
+                android:lineHeight="@dimen/pi_line_height_big"
+                android:textColor="@color/pi_error"
+                tools:text="Falls Sie die PIN nachfolgend erneut falsch eingeben, wird Ihr Ausweisdokument gesperrt." />
+
+            <TextView
+                android:id="@+id/can_description_reset_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pi_spacing_16dp"
+                android:gravity="center"
+                android:lineHeight="@dimen/pi_line_height_big"
+                android:textColor="@color/pi_error"
+                android:textColorLink="@color/pi_error"
+                tools:text="Falls Sie Ihre PIN nicht mehr kennen, lassen Sie diese bitte bei Ihrem städtischen Bürgeramt neu setzen.\n\n\n\n\n\n
+Alternativ können Sie über den Rücksetzservice direkt eine neue PIN anfordern oder ein anderes Verfahren wählen, um sich zu identifizieren." />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_continue_alternative"
+        style="@style/PIButtonStyle.Default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/pi_spacing_16dp"
+        android:layout_marginEnd="@dimen/pi_spacing_16dp"
+        android:visibility="invisible"
+        tools:text="Identifizierung starten Alternative"
+        tools:visibility="visible" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_continue"
+        style="@style/PIButtonStyle.Default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/pi_spacing_16dp"
+        android:layout_marginEnd="@dimen/pi_spacing_16dp"
+        android:layout_marginBottom="@dimen/pi_spacing_16dp"
+        android:layout_marginTop="@dimen/pi_spacing_8dp"
+        tools:text="@string/default_btn_ok" />
+</LinearLayout>

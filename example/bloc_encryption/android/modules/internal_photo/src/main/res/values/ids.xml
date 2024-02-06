@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item type="id" name="step_id_image_front"/>
+    <item type="id" name="step_id_image_back"/>
+    <item type="id" name="step_dl_image_front"/>
+    <item type="id" name="step_dl_image_back"/>
+    <item type="id" name="step_video"/>
+    <item type="id" name="step_unknown"/>
+
+</resources>

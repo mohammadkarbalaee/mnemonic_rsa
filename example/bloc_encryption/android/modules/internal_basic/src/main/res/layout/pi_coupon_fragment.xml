@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:requiresFadingEdge="vertical"
+    android:scrollbars="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pi_spacing_16dp"
+            android:layout_marginTop="@dimen/pi_spacing_16dp"
+            android:layout_marginEnd="@dimen/pi_spacing_16dp"
+            android:textAppearance="@style/PITextAppearance.Bold"
+            tools:text="Identifizierung in einer Postfiliale" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginStart="@dimen/pi_spacing_16dp"
+            android:layout_marginTop="@dimen/pi_spacing_8dp"
+            android:layout_marginEnd="@dimen/pi_spacing_16dp"
+            android:layout_marginBottom="@dimen/pi_spacing_16dp"
+            tools:text="Ein Mitarbeiter scannt Ihren Handy-Coupon und prüft Ihr Ausweisdokument vor Ort." />
+
+        <include
+            android:id="@+id/pi_coupon_content"
+            layout="@layout/pi_coupon_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subtitle"
+            android:layout_marginStart="@dimen/pi_spacing_16dp"
+            android:layout_marginEnd="@dimen/pi_spacing_16dp" />
+
+        <include
+            android:id="@+id/pi_method_selection_button"
+            layout="@layout/pi_method_selection_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pi_coupon_content" />
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

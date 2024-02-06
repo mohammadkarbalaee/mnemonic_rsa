@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <ProgressBar
+        android:id="@+id/pi_progress_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/pi_progress_spinner_white"
+        android:indeterminateDuration="1800"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_container"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/pi_icon"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pi_ic_check_mark"
+                tools:src="@drawable/pi_ic_check_mark"/>
+
+            <TextView
+                android:id="@+id/description_review"
+                style="@style/PITextAppearance.Default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pi_spacing_6dp"
+                android:layout_gravity="center"
+                android:textColor="@color/pi_grey"
+                android:visibility="gone"
+                tools:text="Aufnahme erfolgreich"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/pi_captured_image_preview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:scaleType="fitCenter" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/button_container"
+            android:layout_height="wrap_content"
+            android:background="@color/pi_white"
+            android:visibility="gone"
+            android:orientation="vertical"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/control_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginStart="@dimen/pi_spacing_8dp"
+                android:layout_marginTop="@dimen/pi_spacing_8dp"
+                android:layout_marginEnd="@dimen/pi_spacing_8dp"
+                android:layout_marginBottom="@dimen/pi_spacing_8dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/pi_btn_retry"
+                    style="@style/PIButtonStyle.Outlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/pi_spacing_8dp"
+                    android:layout_marginEnd="@dimen/pi_spacing_6dp"
+                    android:layout_weight="0.4"
+                    android:textAlignment="center"
+                    android:backgroundTint="@color/pi_white"
+                    tools:text="Wiederholen" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/pi_btn_use"
+                    style="@style/PIButtonStyle.Default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/pi_spacing_8dp"
+                    android:layout_weight="0.4"
+                    android:layout_marginStart="@dimen/pi_spacing_6dp"
+                    android:textAlignment="center"
+                    tools:text="Foto benutzen" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

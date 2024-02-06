@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pi_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/eid_pin_first_title"
+        style="@style/PITextAppearance.Title.Bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/pi_spacing_16dp"
+        android:layout_marginTop="@dimen/pi_spacing_16dp"
+        android:layout_marginEnd="@dimen/pi_spacing_16dp"
+        android:layout_marginBottom="@dimen/pi_spacing_8dp"
+        tools:text="PIN festlegen" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:requiresFadingEdge="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/pi_spacing_16dp"
+                android:layout_marginTop="@dimen/pi_spacing_8dp"
+                android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                android:layout_marginBottom="@dimen/pi_spacing_16dp"
+                android:elevation="2dp"
+                app:cardBackgroundColor="@color/pi_light_grey"
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical"
+                    android:padding="@dimen/pi_spacing_16dp">
+
+                    <TextView
+                        android:id="@+id/eid_pin_info_box_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineHeight="@dimen/pi_line_height_big"
+                        tools:text="Im nächsten Schritt legen Sie Ihre persönliche 6-stellige PIN fest und bestätigen diese, bevor Sie die Änderungen durch einen Scan Ihres Ausweises bestätigen." />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/pi_spacing_16dp"
+                android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                android:layout_marginBottom="@dimen/pi_spacing_16dp"
+                android:elevation="2dp"
+                app:cardBackgroundColor="@color/pi_light_grey"
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical"
+                    android:padding="@dimen/pi_spacing_16dp">
+
+                    <TextView
+                        android:id="@+id/eid_pin_info_box_2_title"
+                        style="@style/PITextAppearance.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Sicherheitshinweise" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pi_spacing_8dp"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:src="@drawable/pi_ic_bullet_point" />
+
+                        <TextView
+                            android:id="@+id/eid_pin_info_box_2_bullet_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineHeight="@dimen/pi_line_height_big"
+                            android:paddingStart="@dimen/pi_spacing_8dp"
+                            android:paddingEnd="@dimen/pi_spacing_8dp"
+                            tools:text="Verwenden Sie keine leicht zu erratende Zahlenkombination, also weder 123456 noch Ihr Geburtsdatum oder Zahlen, die auf Ihrem Personalausweis zu lesen sind." />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pi_spacing_8dp"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:src="@drawable/pi_ic_bullet_point" />
+
+                        <TextView
+                            android:id="@+id/eid_pin_info_box_2_bullet_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineHeight="@dimen/pi_line_height_big"
+                            android:paddingStart="@dimen/pi_spacing_8dp"
+                            android:paddingEnd="@dimen/pi_spacing_8dp"
+                            tools:text="Bewahren Sie die PIN nicht zusammen mit dem Ausweis auf." />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/pi_spacing_8dp"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:src="@drawable/pi_ic_bullet_point" />
+
+                        <TextView
+                            android:id="@+id/eid_pin_info_box_2_bullet_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineHeight="@dimen/pi_line_height_big"
+                            android:paddingStart="@dimen/pi_spacing_8dp"
+                            android:paddingEnd="@dimen/pi_spacing_8dp"
+                            tools:text="Notieren Sie die PIN keinesfalls auf Ihrem Ausweis." />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_close_dialog"
+        style="@style/PIButtonStyle.Default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/pi_spacing_16dp"
+        tools:text="default_btn_ok" />
+
+</LinearLayout>

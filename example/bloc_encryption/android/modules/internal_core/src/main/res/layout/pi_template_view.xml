@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/pi_spacing_8dp"
+    android:paddingBottom="@dimen/pi_spacing_8dp"
+    android:paddingStart="@dimen/pi_spacing_24dp"
+    android:paddingEnd="@dimen/pi_spacing_24dp">
+
+    <ImageView
+        android:id="@+id/image_wire"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/image_solid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

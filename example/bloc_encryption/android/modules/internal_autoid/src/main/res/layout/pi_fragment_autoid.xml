@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <include
+            android:id="@+id/doc_type_selection"
+            layout="@layout/pi_fragment_doc_type_selection"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/step_description"
+            layout="@layout/pi_fragment_step_description"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/step_success"
+            layout="@layout/pi_fragment_step_success"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/camera"
+            layout="@layout/pi_camera_autoid"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/review"
+            layout="@layout/pi_camera_review_autoid"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/doc_check_result"
+            layout="@layout/pi_fragment_doc_check_result"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/dvf"
+            layout="@layout/pi_fragment_dvf"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/fvlc"
+            layout="@layout/pi_fragment_fvlc"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/statusui"
+            layout="@layout/pi_fragment_status"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/loading"
+            layout="@layout/pi_fragment_loading"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/error"
+            layout="@layout/pi_fragment_autoid_error"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

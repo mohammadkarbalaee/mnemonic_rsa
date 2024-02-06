@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pi_btn_pressed_state_color">#c0ffcc00</color>
+    <color name="pi_btn_focused_state_color">#c0ffcc00</color>
+    <color name="pi_btn_normal_state_color">#ffffcc00</color>
+    <color name="pi_btn_disabled_state_color">#EDEDED</color>
+    <color name="pi_btn_disabled_text_color">#C4C4C4</color>
+
+    <color name="pi_connection_bg">#66000000</color>
+    <color name="pi_disabled_background_overlay">#B2000000</color>
+    <color name="pi_usa_highlight_background">#7F000000</color>
+    <color name="pi_camera_template_alpha">#80000000</color>
+</resources>

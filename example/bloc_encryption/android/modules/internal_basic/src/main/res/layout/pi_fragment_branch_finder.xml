@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/branch_finder_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map_view"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/pi_branch_finder_bottom_sheet_peek_height" />
+
+    <include
+        android:id="@+id/pi_branch_finder_bottom_sheet"
+        layout="@layout/pi_branch_finder_bottom_sheet" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/content_pane_video"
+            layout="@layout/pi_video_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pi_video_container_height" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:maxHeight="8dp"
+            android:minHeight="8dp"
+            android:progressTint="@color/pi_primary_brand_color"
+            android:scaleY="2"
+            tools:progress="50" />
+
+        <FrameLayout
+            android:id="@+id/content_pane_details"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:keepScreenOn="true" />
+    </LinearLayout>
+    <include
+        android:id="@+id/pi_chat_overlay"
+        layout="@layout/pi_chat_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</FrameLayout>

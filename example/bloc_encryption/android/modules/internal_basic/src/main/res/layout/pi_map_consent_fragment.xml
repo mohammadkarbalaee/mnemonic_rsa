@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/consent_header"
+        style="@style/PITextAppearance.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/pi_spacing_16dp"
+        android:layout_marginEnd="@dimen/pi_spacing_16dp"
+        tools:text="Ihre Datennutzung" />
+
+    <TextView
+        android:id="@+id/consent_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/pi_spacing_16dp"
+        android:gravity="center_horizontal"
+        tools:text="Für bestimmte Funktionen nutzen wir Drittanbieter (z.B. Google Maps zur Anzeige von Postfilialen), um Ihnen einen optimalen Service zu bieten und auf Basis von Analysen unsere App weiter zu verbessern.\n\n Weitere Informationen finden Sie in unseren Datenschutzhinweisen." />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/consent_btn"
+        style="@style/PIButtonStyle.Default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        tools:text="Bestätigen" />
+
+</LinearLayout>

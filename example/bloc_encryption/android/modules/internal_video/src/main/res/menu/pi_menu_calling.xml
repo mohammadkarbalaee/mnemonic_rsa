@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/menu_open_chat"
+        android:icon="@drawable/pi_ic_chat_icon"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction,MenuTitle"
+        tools:title="Chat öffnen" />
+
+    <item
+        android:id="@+id/menu_close_chat"
+        android:icon="@drawable/pi_ic_close"
+        app:showAsAction="always"
+        tools:ignore="MenuTitle"
+        tools:title="Chat schließen" />
+
+    <item
+        android:id="@+id/menu_end_call"
+        android:icon="@drawable/pi_ic_phone"
+        app:showAsAction="always"
+        tools:ignore="MenuTitle"
+        tools:title="Auflegen" />
+</menu>

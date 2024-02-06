@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/key"
+        style="@style/PITextAppearance.Default"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.45"
+        android:paddingEnd="@dimen/pi_spacing_8dp"
+        tools:ignore="RtlSymmetry"
+        tools:text="Ausweisnummer" />
+
+    <TextSwitcher
+        android:id="@+id/value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.55"
+        android:inAnimation="@anim/pi_fade_in"
+        android:outAnimation="@anim/pi_fade_out" />
+</LinearLayout>

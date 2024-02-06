@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/pi_video_container_height"
+    android:layout_gravity="center"
+    android:baselineAligned="false"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/videocontainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <org.webrtc.SurfaceViewRenderer
+            android:id="@+id/localview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <org.webrtc.SurfaceViewRenderer
+                android:id="@+id/remoteview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <ImageView android:id="@+id/agent_placeholder_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/pi_ic_agent_placeholder_gradient"
+                />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/videocontainer_user"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/video_power_switch_cam"
+                android:layout_width="@dimen/pi_round_icon_width"
+                android:layout_height="@dimen/pi_round_icon_width"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="6dp"
+                android:visibility="gone"
+                android:background="@drawable/pi_video_button_bg"
+                app:srcCompat="@drawable/pi_ic_camera_off"
+                tools:visibility="visible"/>
+
+            <ImageButton
+                android:id="@+id/video_switch_cam"
+                android:layout_width="@dimen/pi_round_icon_width"
+                android:layout_height="@dimen/pi_round_icon_width"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/pi_video_button_bg"
+                app:srcCompat="@drawable/pi_ic_camera_change" />
+
+            <ImageButton
+                android:id="@+id/video_toggle_flashlight"
+                android:layout_width="@dimen/pi_round_icon_width"
+                android:layout_height="@dimen/pi_round_icon_width"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/pi_flashlight_button_bg_transparent"
+                android:visibility="gone"
+                app:srcCompat="@drawable/pi_ic_toggle_flashlight"
+                tools:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/upload_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/pi_background_transparent"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ProgressBar
+                    android:id="@+id/progress_indicator_upload"
+                    android:layout_width="@dimen/pi_loading_indicator_size"
+                    android:layout_height="@dimen/pi_loading_indicator_size"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/pi_white" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/screenshot_animation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <ProgressBar
+                android:id="@+id/agent_process_indicator"
+                android:layout_width="@dimen/pi_loading_indicator_size"
+                android:layout_height="@dimen/pi_loading_indicator_size"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/pi_white"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/connection_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/pi_connection_bg"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textAppearance="@style/PITextAppearance.Default"
+                android:textColor="@android:color/white"
+                android:visibility="gone"
+                tools:text="waiting_line_establish_connection" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/action_information_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="@dimen/pi_loading_indicator_size"
+            android:layout_height="@dimen/pi_loading_indicator_size"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/pi_white" />
+
+        <TextView
+            android:id="@+id/action_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progressbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/pi_spacing_32dp"
+            android:gravity="center"
+            android:textAppearance="@style/PITextAppearance.Default"
+            android:textColor="@android:color/white"
+            tools:text="err_video_reconnection" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:requiresFadingEdge="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/pi_spacing_8dp">
+
+            <LinearLayout
+                android:id="@+id/error_text_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pi_spacing_8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/error_title"
+                    style="@style/PITextAppearance.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pi_spacing_16dp"
+                    tools:text="Kontakt konnte nicht hergestellt werden" />
+
+                <TextView
+                    android:id="@+id/error_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/pi_spacing_16dp"
+                    android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                    android:layout_marginBottom="@dimen/pi_spacing_8dp"
+                    tools:text="Es konnte kein Kontakt zum Ausweisdokument hergestellt werden. Bitte versuchen Sie es erneut. (400-45)" />
+
+                <ImageView
+                    android:id="@+id/error_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/pi_spacing_16dp"
+                    android:layout_marginTop="@dimen/pi_spacing_24dp"
+                    android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                    android:layout_marginBottom="@dimen/pi_spacing_24dp"
+                    android:visibility="gone"
+                    tools:src="@drawable/pi_ic_plug"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/error_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/pi_spacing_16dp"
+                    android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                    android:layout_marginBottom="@dimen/pi_spacing_8dp"
+                    android:textColor="@color/pi_error"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    tools:text="Hier könnte weiterer Text stehen, der dem Nutzer einen Vorschlag macht, wie er in diesem Szenario weitermachen kann."
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/error_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/pi_spacing_16dp"
+                    android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                    android:layout_marginBottom="@dimen/pi_spacing_8dp"
+                    android:gravity="center"
+                    android:textColor="@color/pi_error"
+                    android:textColorLink="@color/pi_error"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    tools:text="Hier könnte weiterer Text stehen, der dem Nutzer einen Vorschlag macht, wie er in diesem Szenario weitermachen kann." />
+
+                <FrameLayout
+                    android:id="@+id/error_separator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/pi_spacing_16dp"
+                    android:layout_marginTop="@dimen/pi_spacing_8dp"
+                    android:layout_marginEnd="@dimen/pi_spacing_16dp">
+
+                    <include layout="@layout/pi_separator" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/video_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/video_title"
+                    style="@style/PITextAppearance.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/pi_spacing_16dp"
+                    android:layout_marginTop="@dimen/pi_spacing_8dp"
+                    android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                    android:layout_marginBottom="@dimen/pi_spacing_8dp"
+                    tools:text="So gelingt das Auslesen Ihres Ausweises:" />
+
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:id="@+id/youtube_player_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/pi_spacing_16dp"
+                    android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                    android:layout_marginBottom="@dimen/pi_spacing_16dp"/>
+
+                <include
+                    android:id="@+id/video_separator"
+                    layout="@layout/pi_separator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/pi_spacing_16dp"
+                    android:layout_marginEnd="@dimen/pi_spacing_16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/pi_spacing_16dp"
+                    android:layout_marginTop="@dimen/pi_spacing_8dp"
+                    android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/pi_ic_bullet_point" />
+
+                    <TextView
+                        android:id="@+id/help_bullet_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pi_spacing_8dp"
+                        tools:text="Unterbrechen Sie nicht den Kontakt zwischen Ausweis und Smartphone." />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/pi_spacing_16dp"
+                    android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/pi_ic_bullet_point" />
+
+                    <TextView
+                        android:id="@+id/help_bullet_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pi_spacing_8dp"
+                        tools:text="Bei Verbindungsproblemen verändern Sie die Ausweisposition." />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/pi_spacing_16dp"
+                    android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/pi_ic_bullet_point" />
+
+                    <TextView
+                        android:id="@+id/help_bullet_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pi_spacing_8dp"
+                        tools:text="Entfernen Sie gegebenfalls auch die Schutzhülle Ihres Geräts." />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/pi_spacing_16dp"
+                    android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/pi_ic_bullet_point" />
+
+                    <TextView
+                        android:id="@+id/help_bullet_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pi_spacing_8dp"
+                        tools:text="Kommt es weiterhin zu Störungen, starten Sie die App bitte einmal neu." />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_retry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/pi_spacing_16dp"
+        android:layout_marginTop="@dimen/pi_spacing_8dp"
+        android:layout_marginEnd="@dimen/pi_spacing_16dp"
+        android:visibility="gone"
+        tools:text="Erneut versuchen"
+        tools:visibility="visible" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_method_selection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/pi_spacing_16dp"
+        android:layout_marginTop="@dimen/pi_spacing_8dp"
+        android:layout_marginEnd="@dimen/pi_spacing_16dp"
+        android:layout_marginBottom="@dimen/pi_spacing_8dp"
+        tools:text="Anderes Verfahren wählen" />
+
+</LinearLayout>

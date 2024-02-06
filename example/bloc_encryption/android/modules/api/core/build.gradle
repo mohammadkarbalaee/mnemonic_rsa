@@ -1,0 +1,65 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'maven-publish'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+    namespace 'de.post.ident.api.core'
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.moduleVersionCode
+        versionName rootProject.moduleVersionName
+
+        buildConfigField 'String', 'MODULE_VERSION_NAME', "\"${rootProject.moduleVersionName}\""
+        buildConfigField 'int', 'MODULE_VERSION_CODE', "${rootProject.moduleVersionCode}"
+
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+    }
+}
+
+dependencies {
+    implementation kotlin_std_lib
+
+    implementation project(path: ':modules:internal_core')
+
+    implementation "com.squareup.moshi:moshi:$moshiVersion"
+
+    implementation "androidx.annotation:annotation:$androidXAnnotation"
+    implementation "androidx.appcompat:appcompat:$appcompat"
+    implementation "androidx.core:core-ktx:$androidXKtx"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$androidXKtxLifecycle"
+    implementation "androidx.fragment:fragment-ktx:$androidXKtxFragment"
+    configurations.all {
+        resolutionStrategy {
+            force "com.google.android.gms:play-services-basement:$playServicesBasement"
+        }
+    }
+}
+
+apply from: '../../maven.gradle'

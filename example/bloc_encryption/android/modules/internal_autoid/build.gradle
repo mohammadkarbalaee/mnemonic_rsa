@@ -1,0 +1,79 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'maven-publish'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+    namespace 'de.post.ident.internal_autoid'
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.moduleVersionCode
+        versionName rootProject.moduleVersionName
+
+        buildConfigField "boolean", "CAMERA_MOCK", System.getenv('CAMERA_MOCK') == "true" ? "true" : "false"
+
+        consumerProguardFiles 'consumer-rules.pro'
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+    }
+}
+
+dependencies {
+    implementation project(':modules:internal_core')
+
+    implementation kotlin_std_lib
+    implementation "androidx.appcompat:appcompat:$appcompat"
+    implementation "androidx.core:core-ktx:$androidXKtx"
+    implementation "androidx.fragment:fragment-ktx:$androidXKtxFragment"
+    implementation "com.squareup.moshi:moshi:$moshiVersion"
+    implementation project(path: ':modules:internal_core')
+    implementation  "com.google.firebase:firebase-database-ktx:$firebaseDataKtx"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion"
+    implementation "com.google.android.material:material:$material"
+
+    implementation "androidx.camera:camera-camera2:$camerax_version"
+    implementation "androidx.camera:camera-lifecycle:$camerax_version"
+    implementation "androidx.camera:camera-view:$camerax_view"
+    implementation("androidx.constraintlayout:constraintlayout:$constraintLayout")
+
+    implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+
+    implementation "com.google.protobuf:protobuf-javalite:$protoBuf"
+
+    configurations.all {
+        resolutionStrategy {
+            force "com.google.android.gms:play-services-basement:$playServicesBasement"
+        }
+    }
+}
+
+apply from: '../maven.gradle'

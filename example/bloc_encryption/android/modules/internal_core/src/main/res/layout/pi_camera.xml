@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pi_black"
+    android:gravity="center_horizontal|bottom"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/pi_title"
+        style="@style/PITextAppearance.Default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/pi_spacing_8dp"
+        android:lines="2"
+        android:textColor="@color/pi_post_yellow"
+        tools:text="Ausweis - Vorderseite fotografieren" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/pi_camera_view_finder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintDimensionRatio="W,4:3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/template_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="@id/pi_camera_view_finder"
+            app:layout_constraintTop_toTopOf="@id/pi_camera_view_finder">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/pi_spacing_16dp" />
+
+            <ImageView
+                android:id="@+id/template_navigate_previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/pi_spacing_8dp"
+                android:rotation="180"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:src="@drawable/pi_ic_chevron_right"
+                android:visibility="invisible"
+                tools:ignore="RtlHardcoded" />
+
+            <ImageView
+                android:id="@+id/template_navigate_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/pi_spacing_8dp"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:src="@drawable/pi_ic_chevron_right"
+                tools:ignore="RtlHardcoded" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/help_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/pi_spacing_16dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/pi_white"
+            android:visibility="gone"
+            tools:text="Starten Sie die Aufnahme und bewegen Sie anschließend Ihren Kopf in die angezeigte Silhouette."
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/mask_fvlc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pi_camcorder_mask"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/control_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:orientation="vertical"
+        android:padding="@dimen/pi_spacing_8dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:tabBackground="@null"
+            app:tabIndicatorColor="@android:color/transparent"
+            app:tabMode="auto"
+            app:tabSelectedTextColor="@color/pi_post_yellow"
+            app:tabTextAppearance="@style/PITabLayout.Text"
+            app:tabTextColor="@color/pi_light_grey" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/pi_spacing_8dp">
+
+            <ImageButton
+                android:id="@+id/trigger_button"
+                android:layout_width="@dimen/pi_camera_button_main_size"
+                android:layout_height="@dimen/pi_camera_button_main_size"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                app:srcCompat="@drawable/pi_camera_state_icon" />
+
+            <ImageButton
+                android:id="@+id/switch_camera_button"
+                android:layout_width="@dimen/pi_round_icon_width"
+                android:layout_height="@dimen/pi_round_icon_width"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/pi_spacing_32dp"
+                android:layout_marginEnd="@dimen/pi_spacing_32dp"
+                android:background="@drawable/pi_photo_button_bg"
+                app:srcCompat="@drawable/pi_ic_camera_change" />
+
+            <TextView
+                android:id="@+id/remaining_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#c1272d"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:text="0:03"
+                tools:visibility="visible" />
+
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

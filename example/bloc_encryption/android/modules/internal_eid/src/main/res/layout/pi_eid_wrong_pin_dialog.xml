@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/pi_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/eid_pin_first_title"
+        style="@style/PITextAppearance.Title.Bold"
+        android:textSize="@dimen/pi_fontsize_big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/pi_spacing_16dp"
+        android:layout_marginTop="@dimen/pi_spacing_16dp"
+        android:layout_marginEnd="@dimen/pi_spacing_16dp"
+        android:layout_marginBottom="@dimen/pi_spacing_8dp"
+        android:visibility="visible"
+        tools:text="Verbleibende Versuche" />
+
+    <TextView
+        android:id="@+id/pin_description"
+        style="@style/PIDialogTheme"
+        android:textSize="@dimen/pi_fontsize_title"
+        android:textColorLink="@color/pi_primary_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/pi_spacing_16dp"
+        android:layout_marginTop="@dimen/pi_spacing_16dp"
+        android:layout_marginEnd="@dimen/pi_spacing_16dp"
+        android:visibility="visible"
+        tools:targetApi="p"
+        tools:text="Die letzte PIN-Eingabe war fehlerhaft. Sie haben noch 2 Versuche, bis Ihre PIN gesperrt wird. Sie können sich Ihre letzte, fehlerhafte PIN-Eingabe hier anzeigen lassen:" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/pi_spacing_6dp"
+        app:boxBackgroundColor="@color/pi_transparent"
+        app:boxStrokeColor="@color/pi_color_states_dialog_input_textfield"
+        app:boxBackgroundMode="none"
+        android:visibility="visible"
+        app:passwordToggleEnabled="true">
+
+        <de.post.ident.internal_eid.util.NoImeTextInputEditText
+            android:id="@+id/pin_input_display"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/pi_spacing_32dp"
+            android:padding="@dimen/pi_spacing_8dp"
+            android:background="@color/pi_light_grey"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:importantForAccessibility="no"
+            android:importantForAutofill="no"
+            android:inputType="numberPassword"
+            app:boxBackgroundColor="@color/pi_transparent"
+            app:boxStrokeColor="@color/pi_color_states_dialog_input_textfield"
+            app:boxBackgroundMode="none"
+            android:maxLength="6"
+            android:textSize="@dimen/pi_fontsize_title"
+            android:visibility="visible"
+            tools:hint="******" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

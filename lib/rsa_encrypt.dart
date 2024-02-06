@@ -3,6 +3,7 @@ library rsa_encrypt;
 import 'dart:convert';
 import 'dart:math';
 import 'dart:typed_data';
+import 'package:bip39/bip39.dart' as bip39;
 
 import "package:asn1lib/asn1lib.dart";
 import 'package:flutter/foundation.dart';
@@ -27,11 +28,15 @@ class RsaKeyHelper {
   SecureRandom getSecureRandom() {
     var secureRandom = FortunaRandom();
     var random = Random.secure();
-    List<int> seeds = [];
-    for (int i = 0; i < 32; i++) {
-      seeds.add(random.nextInt(255));
-    }
-    secureRandom.seed(new KeyParameter(new Uint8List.fromList(seeds)));
+    // List<int> seeds = [];
+    // for (int i = 0; i < 32; i++) {
+    //   seeds.add(random.nextInt(255));
+    // }
+    // var mnemonic = bip39.generateMnemonic(strength: 128);
+    String mnemonic =
+        "ghost bind snow clever table police exile dutch miss olive snack harvest";
+    final seed = bip39.mnemonicToSeed(mnemonic);
+    secureRandom.seed(new KeyParameter(new Uint8List.fromList(seed)));
     return secureRandom;
   }
 

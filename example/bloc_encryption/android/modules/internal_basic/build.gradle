@@ -1,0 +1,85 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'maven-publish'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+    namespace 'de.post.ident.internal_basic'
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.moduleVersionCode
+        versionName rootProject.moduleVersionName
+
+        consumerProguardFiles 'consumer-rules.pro'
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+    }
+}
+
+dependencies {
+    implementation project(':modules:internal_core')
+
+    implementation kotlin_std_lib
+    implementation "androidx.appcompat:appcompat:$appcompat"
+    implementation "androidx.core:core-ktx:$androidXKtx"
+    implementation "androidx.fragment:fragment-ktx:$androidXKtxFragment"
+    implementation "com.squareup.moshi:moshi:$moshiVersion"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion"
+
+    implementation("com.google.android.gms:play-services-maps:$playServicesMaps") {
+        because "display map for branch finder"
+    }
+
+    implementation "com.android.volley:volley:$volley"
+    implementation("com.google.android.libraries.places:places:$googlePlaces") {
+        exclude group: "com.github.bumptech.glide"
+        because "autocompletion of cities in branch finder"
+    }
+
+    implementation("com.google.code.gson:gson:$gson")
+
+    implementation("com.google.android.gms:play-services-location:$playServicesLocation") {
+        because "display current user location in branch finder"
+    }
+
+    implementation("androidx.coordinatorlayout:coordinatorlayout:$coordinatorLayout") {
+        because "BottomSheet in branch finder map"
+    }
+    implementation "com.google.android.material:material:$material"
+
+    configurations.all {
+        resolutionStrategy {
+            force "com.google.android.gms:play-services-basement:$playServicesBasement"
+        }
+    }
+}
+
+apply from: '../maven.gradle'

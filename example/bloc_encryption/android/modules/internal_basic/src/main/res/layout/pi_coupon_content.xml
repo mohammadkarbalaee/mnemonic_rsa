@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pi_coupon_blanko"
+    android:padding="@dimen/pi_spacing_32dp"
+    tools:showIn="@layout/pi_coupon_fragment">
+
+    <ProgressBar
+        android:id="@+id/loading_indicator"
+        style="?android:attr/progressBarStyle"
+        android:indeterminateTint="@color/pi_primary_brand_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/coupon_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/coupon_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textAppearance="@style/PITextAppearance.Bold"
+            tools:text="Handy-Coupon" />
+
+        <TextView
+            android:id="@+id/coupon_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/pi_spacing_16dp"
+            tools:text="Identifizierung für Demobank24 Finance Lorem Ispum Bla Bla" />
+
+        <ImageView
+            android:id="@+id/coupon_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/pi_spacing_16dp"
+            android:layout_marginBottom="@dimen/pi_spacing_24dp"
+            android:adjustViewBounds="true"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/pi_pd_scan_code" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/label_billing_number"
+                style="@style/PITextAppearance.CouponLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/pi_fontsize_labels"
+                tools:text="Abrechnungsnummer:" />
+
+            <TextView
+                android:id="@+id/billing_number"
+                style="@style/PITextViewStyle.Monospace.Boxed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                tools:text="XYZ1234567890" />
+
+            <TextView
+                android:id="@+id/label_reference_number"
+                style="@style/PITextAppearance.CouponLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/pi_fontsize_labels"
+                android:layout_marginTop="@dimen/pi_spacing_8dp"
+                tools:text="Referenznummer:" />
+
+            <TextView
+                android:id="@+id/reference_number"
+                style="@style/PITextViewStyle.Monospace.Boxed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                tools:text="09876543211" />
+
+            <TextView
+                android:id="@+id/label_case_id"
+                style="@style/PITextAppearance.CouponLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/pi_fontsize_labels"
+                android:layout_marginTop="@dimen/pi_spacing_8dp"
+                tools:text="Vorgangsnummer:" />
+
+            <TextView
+                android:id="@+id/case_id"
+                style="@style/PITextViewStyle.Monospace.Boxed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                tools:text="09876543211" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/coupon_footer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pi_spacing_16dp"
+            android:gravity="center_horizontal"
+            tools:text="Zur Identifizierung benötigen Sie ein gültiges Ausweisdokument." />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:text="Der Coupon konnte nicht geladen werden."
+        tools:visibility="visible" />
+
+</FrameLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#ffffffff"
+    android:paddingStart="22dp"
+    android:paddingTop="17dp"
+    android:paddingBottom="17dp"
+    android:gravity="center_vertical"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    >
+
+    <TextView
+        android:id="@+id/pin_help_can"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pi_spacing_16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:paddingBottom="11dp"
+        app:drawableStartCompat="@drawable/pi_ic_chevron_right"
+        android:visibility="gone"
+        tools:text="Wo finde ich meine CAN?" />
+
+    <TextView
+        android:id="@+id/pin_help_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pi_spacing_16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:paddingBottom="11dp"
+        app:drawableStartCompat="@drawable/pi_ic_chevron_right"
+        android:visibility="gone"
+        tools:text="Wo finde ich meine PIN?" />
+
+    <TextView
+        android:id="@+id/pin_help_forgot_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pi_spacing_16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:autoLink="web"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/pi_ic_chevron_right"
+        android:visibility="gone"
+        tools:text="Ich kenne meine PIN nicht mehr" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="11dp"
+        />
+
+</LinearLayout>

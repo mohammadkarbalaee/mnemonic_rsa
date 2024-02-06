@@ -1,0 +1,26 @@
+apply plugin: 'maven-publish'
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = moduleGroupId
+                artifactId = project.name
+                version = moduleVersionName
+                from components.release
+            }
+            debug(MavenPublication) {
+                groupId = moduleGroupId
+                artifactId = project.name
+                version = moduleVersionName
+                from components.debug
+            }
+        }
+
+        //publish to filesystem repo
+        repositories {
+            maven {
+                url moduleRepoDir
+            }
+        }
+    }
+}

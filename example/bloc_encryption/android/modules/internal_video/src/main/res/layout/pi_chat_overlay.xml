@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/pi_disabled_background_overlay"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pi_chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/pi_spacing_16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:reverseLayout="true"
+        app:stackFromEnd="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pi_white">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pi_chat_message"
+            style="@style/PIEditText.Default"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pi_spacing_8dp"
+            android:layout_marginTop="@dimen/pi_spacing_8dp"
+            android:layout_marginBottom="@dimen/pi_spacing_8dp"
+            android:layout_weight="1"
+            app:boxCornerRadiusBottomEnd="@dimen/pi_button_corner_radius"
+            app:boxCornerRadiusBottomStart="@dimen/pi_button_corner_radius"
+            app:boxCornerRadiusTopEnd="@dimen/pi_button_corner_radius"
+            app:boxCornerRadiusTopStart="@dimen/pi_button_corner_radius"
+            app:boxStrokeColor="@color/pi_secondary_brand_color"
+            tools:hint="Nachricht">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text|textMultiLine"
+                android:maxLength="2000" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pi_chat_message_send"
+            style="@style/PIButtonStyle.Default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginStart="@dimen/pi_spacing_16dp"
+            android:layout_marginTop="@dimen/pi_spacing_8dp"
+            android:layout_marginEnd="@dimen/pi_spacing_8dp"
+            android:layout_marginBottom="@dimen/pi_spacing_8dp"
+            tools:text="Senden" />
+
+    </LinearLayout>
+
+</LinearLayout>

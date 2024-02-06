@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- PERMISSIONS -->
+    <!-- Needed for capturing images -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application android:allowBackup="false">
+
+        <activity
+            android:name=".PhotoIdentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="layoutDirection|locale"
+            android:theme="@style/PIPostTheme" />
+    </application>
+
+</manifest>

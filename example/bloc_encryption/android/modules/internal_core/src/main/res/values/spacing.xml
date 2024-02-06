@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pi_spacing_2dp">2dp</dimen>
+    <dimen name="pi_spacing_4dp">4dp</dimen>
+    <dimen name="pi_spacing_6dp">6dp</dimen>
+    <dimen name="pi_spacing_8dp">8dp</dimen>
+    <dimen name="pi_spacing_16dp">16dp</dimen>
+    <dimen name="pi_spacing_24dp">24dp</dimen>
+    <dimen name="pi_spacing_32dp">32dp</dimen>
+    <dimen name="pi_spacing_40dp">40dp</dimen>
+    <dimen name="pi_spacing_48dp">48dp</dimen>
+    <dimen name="pi_spacing_64dp">64dp</dimen>
+    <dimen name="pi_spacing_160dp">160dp</dimen>
+
+    <dimen name="pi_fading_edge_length">70dp</dimen>
+</resources>

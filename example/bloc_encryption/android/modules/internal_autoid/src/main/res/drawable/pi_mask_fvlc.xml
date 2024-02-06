@@ -1,0 +1,44 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="1080dp"
+    android:height="2400dp"
+    android:viewportWidth="1080"
+    android:viewportHeight="2400">
+  <path
+      android:pathData="M0,0v2400h1080V0H0zM810.9,1589c-69.8,99.3 -165.7,160 -270.9,160s-201.1,-60.7 -270.9,-160S156,1352.2 156,1200s43.4,-289.7 113.1,-389c69.8,-99.3 165.7,-160 270.9,-160s201.1,60.7 270.9,160S924,1047.8 924,1200S880.6,1489.7 810.9,1589z">
+    <aapt:attr name="android:fillColor">
+      <gradient
+          android:startX="540"
+          android:startY="0"
+          android:endX="540"
+          android:endY="2397.2"
+          android:type="linear">
+        <item android:offset="0" android:color="#FFFFCC00"/>
+        <item android:offset="0.3" android:color="#FFFFCC00"/>
+        <item android:offset="0.6" android:color="#75FFDE59"/>
+        <item android:offset="0.7" android:color="#19FFEB99"/>
+        <item android:offset="1" android:color="#00FFF0B2"/>
+      </gradient>
+    </aapt:attr>
+  </path>
+  <path
+      android:pathData="M0,0v2400h1080V0H0zM810.9,1589c-69.8,99.3 -165.7,160 -270.9,160s-201.1,-60.7 -270.9,-160S156,1352.2 156,1200s43.4,-289.7 113.1,-389c69.8,-99.3 165.7,-160 270.9,-160s201.1,60.7 270.9,160S924,1047.8 924,1200S880.6,1489.7 810.9,1589z"
+      android:fillAlpha="0.2">
+    <aapt:attr name="android:fillColor">
+      <gradient
+          android:startX="540"
+          android:startY="124.4"
+          android:endX="540"
+          android:endY="567.3"
+          android:type="linear">
+        <item android:offset="0" android:color="#FF000000"/>
+        <item android:offset="1" android:color="#00FFCC00"/>
+      </gradient>
+    </aapt:attr>
+  </path>
+  <path
+      android:pathData="M924,1200c0,152.2 -43.4,289.7 -113.1,389c-69.8,99.3 -165.7,160 -270.9,160s-201.1,-60.7 -270.9,-160S156,1352.2 156,1200s43.4,-289.7 113.1,-389c69.8,-99.3 165.7,-160 270.9,-160s201.1,60.7 270.9,160C880.6,910.3 924,1047.8 924,1200z"
+      android:strokeWidth="12"
+      android:fillColor="#00000000"
+      android:strokeColor="#FFFAE6"/>
+</vector>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:requiresFadingEdge="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pi_spacing_16dp"
+        android:layout_marginTop="@dimen/pi_spacing_24dp"
+        android:layout_marginRight="@dimen/pi_spacing_16dp"
+        android:layout_marginBottom="@dimen/pi_spacing_16dp"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/waiting_line_title"
+            style="@style/PITextAppearance.Title.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/pi_spacing_8dp"
+            android:visibility="gone"
+            tools:text="Sie werden mit dem nächsten freien Mitarbeiter verbunden."
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/waiting_line_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/pi_spacing_8dp"
+            tools:text="Sie werden mit dem nächsten freien Mitarbeiter verbunden.\nDies kann einige Minuten dauern. Bitte haben Sie etwas Geduld.\nDie geringste Wartezeit haben Sie aktuell in der Zeit zwischen 13:00 - 17:00 Uhr." />
+
+        <LinearLayout
+            android:id="@+id/waiting_line_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pi_spacing_16dp"
+            android:alpha="0.0"
+            android:orientation="horizontal"
+            tools:alpha="1.0">
+
+            <TextView
+                android:id="@+id/waiting_time_estimate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/pi_spacing_16dp"
+                tools:text="Geschätzte Wartezeit:" />
+
+            <TextSwitcher
+                android:id="@+id/waiting_time_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inAnimation="@android:anim/fade_in"
+                android:outAnimation="@android:anim/fade_out" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_to_method_selection"
+        style="@style/PIButtonStyle.Default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginStart="@dimen/pi_spacing_16dp"
+        android:layout_marginTop="@dimen/pi_spacing_8dp"
+        android:layout_marginEnd="@dimen/pi_spacing_16dp"
+        android:layout_marginBottom="@dimen/pi_spacing_16dp"
+        android:enabled="false"
+        android:visibility="gone"
+        tools:visibility="visible"
+        tools:text="Anderes Verfahren wählen" />
+</LinearLayout>

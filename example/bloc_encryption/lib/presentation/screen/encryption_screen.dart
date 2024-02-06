@@ -51,7 +51,7 @@ class _EncryptionScreenState extends State<EncryptionScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  RaisedButton(
+                  ElevatedButton(
                     child: Text("Private Key"),
                     onPressed: () {
                       _keysManagerBloc.add(
@@ -60,7 +60,7 @@ class _EncryptionScreenState extends State<EncryptionScreen> {
                     },
                   ),
                   SizedBox(width: 10),
-                  RaisedButton(
+                  ElevatedButton(
                     child: Text("Public Key"),
                     onPressed: () {
                       _keysManagerBloc.add(
@@ -128,7 +128,7 @@ class _EncryptionScreenState extends State<EncryptionScreen> {
                   decoration: InputDecoration(hintText: "String to encrypt"),
                 ),
               ),
-              RaisedButton(
+              ElevatedButton(
                 child: Text("Encrypt"),
                 onPressed: () {
                   _encryptionBloc.add(
@@ -179,7 +179,7 @@ class _EncryptionScreenState extends State<EncryptionScreen> {
                   ),
                 ),
               ),
-              RaisedButton(
+              ElevatedButton(
                 child: Text("Decrypt"),
                 onPressed: () {
                   _encryptionBloc.add(

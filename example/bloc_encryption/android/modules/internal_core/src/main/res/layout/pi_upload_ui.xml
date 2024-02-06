@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pi_background_transparent"
+    android:clickable="true"
+    android:visibility="invisible"
+    tools:visibility="visible">
+
+    <ProgressBar
+        android:id="@+id/upload_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/upload_linear_layout"
+        android:layout_marginBottom="-6dp"
+        android:max="100"
+        tools:progress="50" />
+
+    <LinearLayout
+        android:id="@+id/upload_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/pi_white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textview_upload"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/pi_spacing_16dp"
+            android:paddingEnd="@dimen/pi_spacing_16dp"
+            tools:text="Dokumente werden hochgeladen\nMultiline" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/pi_spacing_16dp" />
+
+        <ImageView
+            android:id="@+id/upload_fail"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:padding="@dimen/pi_spacing_16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pi_ic_fail"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </LinearLayout>
+</RelativeLayout>

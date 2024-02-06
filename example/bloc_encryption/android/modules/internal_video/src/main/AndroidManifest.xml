@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- PERMISSIONS -->
+    <!-- Needed for the videochat -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- Needed to enable speaker phone for WebRTC -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- Needed to keep service running in foreground during videochat -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- Needed to enable speaker checks for WebRTC -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- Needed for check of connection typ and signal strength >= Android 10-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application android:allowBackup="false">
+
+        <activity
+            android:name=".ui.VideoIdentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="layoutDirection|locale"
+            android:theme="@style/PIPostTheme" />
+        <service
+            android:name=".VideoChatService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="camera|microphone"
+            />
+    </application>
+
+</manifest>

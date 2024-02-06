@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linear_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pi_spacing_16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/PITextAppearance.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingTop="@dimen/pi_spacing_16dp"
+                android:paddingBottom="@dimen/pi_spacing_16dp"
+                android:textStyle="bold"
+                tools:text="Schritt 1: Ausweis fotografieren" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:visibility="invisible"
+                android:src="@drawable/step1_id_front"
+                tools:visibility="visible"
+                />
+
+            <TextView
+                android:id="@+id/subtitle"
+                style="@style/PITextAppearance.Default"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageContainer"
+                android:paddingTop="@dimen/pi_spacing_16dp"
+                android:paddingStart="@dimen/pi_spacing_16dp"
+                android:paddingBottom="@dimen/pi_spacing_16dp"
+                tools:text="Erstellen Sie gut lesbare Fotos der Vorder- und Rückseite Ihres deutschen Personalausweises."/>
+
+
+            <LinearLayout
+                android:id="@+id/imageContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image"
+                android:layout_marginTop="@dimen/pi_spacing_8dp"
+                android:layout_marginBottom="@dimen/pi_spacing_8dp"
+                android:background="@drawable/pi_background_grey"
+                android:visibility="invisible"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/pi_spacing_8dp"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/containerNotVisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/pi_spacing_4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/imageOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/step2_holo_invisible" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/pi_spacing_4dp"
+                        tools:visibility="visible">
+
+
+                        <ImageView
+                            android:id="@+id/iconOne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pi_cross" />
+
+                        <TextView
+                            android:id="@+id/iconOneDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="2"
+                            android:paddingStart="@dimen/pi_spacing_8dp"
+                            android:paddingEnd="@dimen/pi_spacing_8dp"
+                            tools:text="Hologramme nicht sichtbar." />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/containerVisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/pi_spacing_4dp"
+                    tools:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/imageTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/step2_holo_visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/pi_spacing_4dp">
+
+                        <ImageView
+                            android:id="@+id/iconTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pi_check_mark" />
+
+                        <TextView
+                            android:id="@+id/iconTwoDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="2"
+                            android:paddingStart="@dimen/pi_spacing_8dp"
+                            android:paddingEnd="@dimen/pi_spacing_8dp"
+                            tools:text="Hologramme sichtbar." />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/pi_spacing_8dp"
+                android:paddingStart="@dimen/pi_spacing_16dp"
+                android:paddingTop="@dimen/pi_spacing_16dp"
+                android:layout_below="@+id/subtitle"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icon_step_one"
+                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/pi_spacing_48dp"
+                    tools:src="@drawable/pi_ic_lightbulp_icon"/>
+
+                <TextView
+                    android:id="@+id/description_step_one"
+                    style="@style/PITextAppearance.Default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Auf gute Beleuchtung achten"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/pi_spacing_8dp"
+                android:paddingStart="@dimen/pi_spacing_16dp"
+                android:paddingTop="@dimen/pi_spacing_8dp"
+                android:layout_below="@+id/linear_one"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icon_step_two"
+                    android:layout_width="@dimen/pi_spacing_48dp"
+                    android:layout_height="wrap_content"
+                    tools:src="@drawable/pi_ic_idcard_icon"/>
+
+                <TextView
+                    android:id="@+id/description_step_two"
+                    style="@style/PITextAppearance.Default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Auf einfarbigen Untergrund legen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/pi_spacing_8dp"
+                android:paddingStart="@dimen/pi_spacing_16dp"
+                android:layout_below="@+id/linear_two"
+                android:paddingTop="@dimen/pi_spacing_8dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icon_step_three"
+                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/pi_spacing_48dp"
+                    tools:src="@drawable/pi_ic_mask_icon"/>
+
+                <TextView
+                    android:id="@+id/description_step_three"
+                    style="@style/PITextAppearance.Default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="An der Maske ausrichten"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_continue_standard"
+        style="@style/PIButtonStyle.Default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/pi_spacing_16dp"
+        android:layout_marginTop="@dimen/pi_spacing_8dp"
+        android:layout_marginEnd="@dimen/pi_spacing_16dp"
+        android:layout_marginBottom="@dimen/pi_spacing_16dp"
+        tools:text="Fortfahren" />
+</LinearLayout>

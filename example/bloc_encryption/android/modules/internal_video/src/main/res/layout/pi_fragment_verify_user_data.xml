@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:requiresFadingEdge="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/pi_spacing_16dp"
+            android:layout_marginTop="@dimen/pi_spacing_24dp"
+            android:layout_marginRight="@dimen/pi_spacing_16dp"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/pi_fading_edge_length">
+
+            <TextView
+                android:id="@+id/id_card_data_title"
+                style="@style/PITextAppearance.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/pi_spacing_16dp"
+                tools:text="Ausweisdaten" />
+
+            <LinearLayout
+                android:id="@+id/id_card_data_item_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pi_fading_edge_length"
+        android:layout_alignParentBottom="true"
+        app:srcCompat="@drawable/pi_scroll_fade" />
+</RelativeLayout>

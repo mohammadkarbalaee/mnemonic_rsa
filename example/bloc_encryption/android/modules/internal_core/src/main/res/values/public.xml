@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- see https://developer.android.com/studio/projects/android-library#PrivateResources -->
+<resources>
+    <!-- public ressources can be customized by sdk user -->
+    <public name="pi_toolbar_icon" type="drawable" />
+    <public name="pi_primary_brand_color" type="string" />
+    <public name="pi_primary_dark_brand_color" type="string" />
+    <public name="pi_secondary_brand_color" type="string" />
+    <public name="pi_text_on_primary_brand_color" type="string" />
+    <public name="pi_text_on_secondary_brand_color" type="string" />
+    <public name="pi_icon_color_on_primary_brand_color" type="string" />
+    <public name="pi_exit_icon_color_on_primary_brand_color" type="string" />
+    <public name="pi_status_bar_text_color_dark" type="bool" />
+    <public name="pi_button_corner_radius" type="dimen" />
+</resources>

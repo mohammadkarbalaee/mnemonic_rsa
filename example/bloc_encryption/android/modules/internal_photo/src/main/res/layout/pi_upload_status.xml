@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/upload_status_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pi_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_upload_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pi_spacing_16dp"
+            android:layout_marginTop="@dimen/pi_spacing_24dp"
+            android:layout_marginEnd="@dimen/pi_spacing_16dp"
+            android:textAppearance="@style/PITextAppearance.Title.Bold"
+            tools:text="Ihre Aufnahmen wurden erfolgreich übertragen. Lorem ipsum." />
+
+        <TextView
+            android:id="@+id/text_upload_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pi_spacing_16dp"
+            android:layout_marginTop="@dimen/pi_spacing_32dp"
+            android:layout_marginEnd="@dimen/pi_spacing_16dp"
+            android:layout_marginBottom="@dimen/pi_spacing_16dp"
+            android:textAppearance="@style/PITextAppearance.Default"
+            tools:text="Wir prüfen Ihre Dokumente, Sie werden in Kürze über das Ergebnis informiert." />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pi_spacing_16dp"
+            android:layout_marginEnd="@dimen/pi_spacing_16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pi_textview_status_title"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/pi_spacing_8dp"
+                android:paddingEnd="@dimen/pi_spacing_8dp">
+
+                <TextView
+                    android:id="@+id/status_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="@dimen/pi_spacing_16dp"
+                    android:paddingBottom="@dimen/pi_spacing_16dp"
+                    android:textAppearance="@style/PITextAppearance.Bold"
+                    android:textColor="@color/pi_text_on_primary_brand_color"
+                    tools:text="Status Ihrer Identifizierung" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageButton
+                        android:id="@+id/refresh_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/pi_transparent"
+                        app:srcCompat="@drawable/pi_ic_refresh" />
+
+                    <ProgressBar
+                        android:id="@+id/status_progress_bar"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:indeterminate="true"
+                        android:indeterminateTint="@color/pi_icon_color_on_primary_brand_color"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pi_light_grey"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageview_uploading_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/pi_spacing_24dp"
+                    android:background="@color/pi_transparent"
+                    app:srcCompat="@drawable/pi_ic_status_inactive" />
+
+                <TextView
+                    android:id="@+id/text_uploading_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/pi_spacing_16dp"
+                    android:paddingStart="@dimen/pi_spacing_8dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="@dimen/pi_spacing_8dp"
+                    android:textAppearance="@style/PITextAppearance.Default"
+                    tools:text="Gestartet" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pi_light_grey"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/pi_spacing_8dp">
+
+                <ImageView
+                    android:id="@+id/imageview_document_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/pi_spacing_24dp"
+                    tools:src="@drawable/pi_ic_status_in_progress" />
+
+                <TextView
+                    android:id="@+id/text_document_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/pi_spacing_16dp"
+                    android:paddingStart="@dimen/pi_spacing_8dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="@dimen/pi_spacing_8dp"
+                    android:textAppearance="@style/PITextAppearance.Default"
+                    tools:text="Bild- oder Videoqualität nicht ausreichend" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/continue_btn"
+            style="@style/PIButtonStyle.Default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/pi_spacing_16dp"
+            tools:text="@string/default_btn_ok" />
+
+        <TextView
+            android:id="@+id/to_method_selection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pi_spacing_16dp"
+            android:layout_marginEnd="@dimen/pi_spacing_16dp"
+            android:layout_marginBottom="@dimen/pi_spacing_16dp"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            app:drawableStartCompat="@drawable/pi_ic_chevron_right"
+            tools:text="anderes Verfahren wählen"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+</ScrollView>

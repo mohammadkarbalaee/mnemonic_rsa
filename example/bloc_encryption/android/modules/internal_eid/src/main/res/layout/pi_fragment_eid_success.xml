@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/pi_spacing_16dp"
+        android:layout_marginTop="@dimen/pi_spacing_16dp"
+        android:layout_marginEnd="@dimen/pi_spacing_16dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/eid_success_title"
+            style="@style/PITextAppearance.Title.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            tools:text="Vielen Dank!" />
+
+        <TextView
+            android:id="@+id/eid_success_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/pi_spacing_16dp"
+            android:gravity="center_horizontal"
+            android:lineHeight="@dimen/pi_line_height_big"
+            tools:text="Ihre Identifizierung war erfolgreich." />
+
+        <ImageView
+            android:id="@+id/eid_success_icon"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_margin="@dimen/pi_spacing_8dp"
+            app:srcCompat="@drawable/pi_ic_check" />
+
+        <TextView
+            android:id="@+id/eid_success_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/pi_spacing_16dp"
+            android:gravity="center_horizontal"
+            android:lineHeight="@dimen/pi_line_height_big"
+            tools:text="Sie können den Ausweis nun vom Smartphone entfernen." />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_quit"
+        style="@style/PIButtonStyle.Default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/pi_spacing_16dp"
+        tools:text="Beenden" />
+
+</LinearLayout>

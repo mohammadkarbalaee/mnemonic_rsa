@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingEnd="@dimen/pi_spacing_8dp"
+    android:paddingStart="@dimen/pi_spacing_8dp"
+    android:paddingBottom="@dimen/pi_spacing_8dp">
+
+    <TextView
+        android:id="@+id/days_in_week"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:text="Montag bis Freitag" />
+
+    <LinearLayout
+        android:id="@+id/times_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" />
+</LinearLayout>

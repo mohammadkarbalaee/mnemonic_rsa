@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- PERMISSIONS -->
+    <!-- Needed to read ID document for eID -->
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-sdk
+        tools:overrideLibrary="com.governikus.ausweisapp2" />
+
+    <application android:allowBackup="false">
+
+        <activity
+            android:name=".EidIdentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="layoutDirection|locale"
+            android:theme="@style/PIPostTheme">
+
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- METHOD SELECTION -->
+    <item type="id" name="btn_start_ident_method_basic"/>
+    <item type="id" name="btn_start_ident_method_photo"/>
+    <item type="id" name="btn_start_ident_method_eid"/>
+    <item type="id" name="btn_start_ident_method_video"/>
+    <item type="id" name="btn_start_ident_method_autoid"/>
+
+    <!-- CAMERA VIEW -->
+    <item type="id" name="cam_view_tab_perso"/>
+    <item type="id" name="cam_view_tab_pass"/>
+    <item type="id" name="cam_view_tab_dleu"/>
+    <item type="id" name="cam_view_tab_dlold"/>
+    <item type="id" name="cam_view_tab_other"/>
+
+</resources>

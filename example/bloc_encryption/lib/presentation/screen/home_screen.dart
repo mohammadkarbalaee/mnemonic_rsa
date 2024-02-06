@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
         title: Text("RSA Encrypt"),
       ),
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           onPressed: () {
             BlocProvider.of<AppInitBloc>(context).add(GenerateKeys());
           },

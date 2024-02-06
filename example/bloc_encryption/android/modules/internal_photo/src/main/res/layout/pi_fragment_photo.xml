@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <include
+            android:id="@+id/overview"
+            layout="@layout/pi_fragment_photo_overview" />
+
+        <include
+            android:id="@+id/camera"
+            layout="@layout/pi_camera" />
+
+        <include
+            android:id="@+id/preview"
+            layout="@layout/pi_camera_review"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/upload"
+            layout="@layout/pi_upload_ui"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/upload_status"
+            layout="@layout/pi_upload_status"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

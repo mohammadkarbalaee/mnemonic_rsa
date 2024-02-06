@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "159661492872",
+    "project_id": "ecrop-crowdfunding",
+    "storage_bucket": "ecrop-crowdfunding.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159661492872:android:5d123dea2082440a2e2d3d",
+        "android_client_info": {
+          "package_name": "ai.youki.ecrop.crowdfunding"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcO3_KYl0bcNJJjj4ollXl1x4ZPqzOYFY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159661492872:android:23316f62ff10133b2e2d3d",
+        "android_client_info": {
+          "package_name": "ai.youki.wattify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcO3_KYl0bcNJJjj4ollXl1x4ZPqzOYFY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
